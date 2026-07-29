@@ -3,7 +3,9 @@ import './Header.css';
 function Header() {
   return ( 
     <header className='header'>
-      header
+      <div className="header-left">
+        
+      </div>
     </header>
   )
 }
