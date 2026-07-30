@@ -6,7 +6,9 @@
   display: flex;
 }
 
-.main-content {
+.main-content{
   flex: 1;
-  padding: 20px;
+  margin-top: 56px;
+  margin-left: 240px;
+  padding: 24px;
 }

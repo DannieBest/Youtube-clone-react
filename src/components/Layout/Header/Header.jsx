@@ -22,6 +22,7 @@ function Header() {
               className="header__search-input"
               type='search'
               placeholder='search'
+              aria-label='search videos'
             />
             <button className="header__search-button" aria-label='search'>
               <i className="material-icons">search</i>

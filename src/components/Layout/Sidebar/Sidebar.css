@@ -1,5 +1,5 @@
 .sidebar {
-  display: flex;
+  display: block;
   height: calc(100vh - 60px);
   border-right: 1px solid #ddd;
   width: 240px;
@@ -73,10 +73,12 @@
   font-weight: 400;
 }
 
-.sidebar__link img {
-  border-radius: 50%;
-  height: 25px;
-  width: auto;
+.sidebar__avatar{
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  object-fit:cover;
+  flex-shrink:0;
 }
 
 .sidebar__link:hover {

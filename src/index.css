@@ -15,7 +15,21 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Roboto',sans-serif;
+}
+
+:root{
+
+  --header-height:56px;
+
+  --sidebar-width:240px;
+
+  --border-color:#e5e5e5;
+
+  --background:#fff;
+
+  --hover:#f2f2f2;
+
 }
 
 a {
