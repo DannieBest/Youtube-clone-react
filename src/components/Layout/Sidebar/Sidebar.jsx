@@ -130,8 +130,8 @@ function Sidebar () {
             </div>
         </section> 
 
+        <hr className="sidebar__divider" />
         
-
       </nav>
 
     </aside>
