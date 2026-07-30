@@ -8,7 +8,7 @@ function AppLayout() {
     <div className='app'>
       <Header />
 
-      <div className='app-body'>
+      <div className='app-layout'>
         <Sidebar />
 
         <main className='main-content'>
