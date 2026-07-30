@@ -1,17 +1,28 @@
+/* ==========================================
+   HEADER CONTAINER
+========================================== */
+
 .header {
   height: 56px;
+  width: 100%;
+  padding: 0 16px;
   position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+
   border-bottom: 1px solid #e5e5e5;
   background-color: #fff;
-  box-sizing: border-box;
 }
+
+
+/* ==========================================
+   HEADER SECTIONS
+========================================== */
 
 .header__left,
 .header__center,
@@ -22,25 +33,27 @@
 
 .header__left {
   gap: 8px;
+  justify-content: flex-start;
 }
 
 .header__center {
- justify-content: center;
-
   flex: 1;
-  
+  justify-content: center;
   max-width: 600px;
   min-width: 40px;
-
-
-  margin-right: 65px;
   margin-left: 80px;
+  margin-right: 65px;
 }
 
 .header__right {
   gap: 8px;
   flex-shrink: 0;
 }
+
+
+/* ==========================================
+   LOGO
+========================================== */
 
 .logo img {
   height: 40px;
@@ -50,6 +63,11 @@
   border-radius: 14px;
 }
 
+
+/* ==========================================
+   SEARCH BAR
+========================================== */
+
 .header__search-form {
   display: flex;
   align-items: center;
@@ -58,14 +76,19 @@
 
 .header__search-input {
   flex: 1;
+  min-width: 0;
   padding: 10px 14px;
-   min-width: 0;
-  border: 1px solid #ccc;
-  border-right: none;
-  border-radius: 40px 0 0 40px;
   font-size: 16px;
   outline: none;
   background-color: #fff;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+}
+
+.header__search-input:focus {
+  outline: none;
+  border-color: #1976d2;
 }
 
 .header__search-form:focus-within .header__search-input {
@@ -73,48 +96,55 @@
 }
 
 .header__search-button {
-  border: 1px solid #ccc;
-  background-color: #f8f8f8;
-  padding: 6px 14px;
-  border-radius: 0 40px 40px 0;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 6px 14px;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 0 40px 40px 0;
 }
 
-.header__search-input:focus {
-  outline: none;
-
-  border-color: #1976d2;
+.header__search-form:focus-within .header__search-button {
+  border-color: #1c62b9;
+  background-color: #f0f0f0;
 }
+
+
+/* ==========================================
+   VOICE SEARCH
+========================================== */
 
 .header__voice-search-button {
-  background-color: #fbf8f8;
-  border: 1px solid #ccc;
-  padding: 6px;
-  border-radius: 50%;
-  margin-left: 12px;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 6px;
+  cursor: pointer;
+  background-color: #fbf8f8;
+  border-radius: 50%;
   border: 1px solid rgb(215, 212, 212);
+  margin-left: 12px;
 }
 
-.sidebar__toggle,
 
+/* ==========================================
+   ICON BUTTONS
+========================================== */
+
+.sidebar__toggle,
 .create-button,
 .header__notification-button,
 .profile-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 6px;
-  border-radius: 50%;
 }
 
 .sidebar__toggle:hover,
@@ -125,6 +155,11 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
+
+/* ==========================================
+   CREATE BUTTON
+========================================== */
+
 .create-button {
   padding: 6px 12px;
   gap: 4px;
@@ -132,7 +167,7 @@
   font-size: 14px;
   font-weight: 500;
   border-radius: 24px;
-  background:  rgb(251, 248, 248);
+  background: rgb(251, 248, 248);
   border: 1px solid rgb(215, 212, 212);
 }
 
@@ -142,16 +177,39 @@
   font-weight: bold;
 }
 
+
+/* ==========================================
+   FOCUS STATES
+========================================== */
+
+.header__search-button:focus-visible,
+.header__voice-search-button:focus-visible,
+.sidebar__toggle:focus-visible {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
+}
+
+
+/* ==========================================
+   MATERIAL ICONS
+========================================== */
+
 .material-icons {
   font-size: 26px;
   color: #0f0f0f;
 }
 
+
+/* ==========================================
+   RESPONSIVE - TABLET / MOBILE
+========================================== */
+
 @media (max-width: 768px) {
   .header__center {
-    margin: 0 16px;
     flex: 0;
-    transition: 0.1s ease-in;
+    margin-left: 16px;
+    margin-right: 16px;
+    transition: all 0.1s ease-in;
   }
 
   .header__right {
@@ -173,7 +231,6 @@
     background: none;
     margin-right: -10px;
   }
-
 
   .header {
     padding: 0 4px;
