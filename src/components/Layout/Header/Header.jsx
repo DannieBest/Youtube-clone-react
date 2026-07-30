@@ -9,7 +9,7 @@ function Header() {
         </button>
         <a href="#" className="logo">
           <img 
-            src="/youtube-image.pn" alt="Youtube-logo" 
+            src="/youtube-image.png" alt="Youtube-logo" 
             loading='lazy'
           />
         </a>
@@ -19,14 +19,14 @@ function Header() {
           <form className="header__search-form">
             <input 
               className="header__search-input"
-              type='search videos'
+              type='search'
               placeholder='search'
             />
             <button className="header__search-button" aria-label='search'>
               <i className="material-icons">search</i>
             </button>
           </form>
-          <button className="voice__search-button" aria-label='voice search'>
+          <button className="header__voice-search-button" aria-label='voice search'>
             <i className="material-icons">mic</i>
           </button>
       </div>
@@ -36,7 +36,7 @@ function Header() {
           <i className="material-icons">add</i>
           <span>Create</span>
         </button>
-        <button className="notification-button" aria-label='profile'>
+        <button className="header__notification-button" aria-label='profile'>
           <i className="material-icons">notifications</i>
         </button>
         <button className="profile-button" aria-label='profile'>
