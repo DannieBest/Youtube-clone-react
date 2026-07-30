@@ -52,8 +52,8 @@
   color: inherit;
 
   transition:
-    background-color rgb(175, 175, 175),
-    color rgb(105, 104, 104);
+    background-color .2s ease,
+    color .2s ease;
 }
 
 .sidebar__link i {
@@ -73,8 +73,14 @@
   font-weight: 400;
 }
 
+.sidebar__link img {
+  border-radius: 50%;
+  height: 25px;
+  width: auto;
+}
+
 .sidebar__link:hover {
-  background-color: grey;
+  background:#f2f2f2;
 }
 
 .sidebar__divider {
@@ -83,3 +89,4 @@
   margin: 12px 0;
   flex-shrink: 0;
 }
+

@@ -1,4 +1,5 @@
 import './Header.css';
+import profile_pic from '../../../assets/channel-images/profile.jpeg';
 
 function Header() {
   return ( 
@@ -40,7 +41,11 @@ function Header() {
           <i className="material-icons">notifications</i>
         </button>
         <button className="profile-button" aria-label='profile'>
-          <i className="material-icons">account_circle</i>
+          <img
+            loading='lazy'
+            src={profile_pic}
+            alt='profile img'
+          />
         </button>
       </div>
     </header>

@@ -63,6 +63,16 @@
   border-radius: 14px;
 }
 
+.profile-button img {
+  height: 30px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.profile-button {
+  margin-left: 16px;
+}
+
 
 /* ==========================================
    SEARCH BAR
