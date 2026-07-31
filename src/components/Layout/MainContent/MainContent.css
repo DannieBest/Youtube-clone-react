@@ -1,10 +1,10 @@
 .main-content {
   flex: 1;
-  margin-top: 56px;
-  margin-left: 240px;
+  margin-top: var(--header-height);
+  margin-left: var(--sidebar-width);
  
 
-  min-height: calc(100vh - 56px);
+  min-height: calc(100vh - var(--header-height));
 
-  background: #ffffff;
+  background: var(--background);
 }
