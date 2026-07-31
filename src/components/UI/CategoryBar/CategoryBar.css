@@ -1,0 +1,132 @@
+/* ==========================================
+   CATEGORY BAR WRAPPER (FIXED POSITION)
+========================================== */
+
+.category-bar__wrapper {
+  position: fixed;
+  top: var(--header-height);
+  left: var(--sidebar-width);
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  background: var(--background);
+  border-bottom: 1px solid var(--border-color);
+
+  z-index: 90;
+}
+
+/* ==========================================
+   SCROLLABLE NAVIGATION CONTAINER
+========================================== */
+
+.category-bar__container {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 8px 48px 8px 16px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.category-bar__container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ==========================================
+   CATEGORY BUTTONS
+========================================== */
+
+.category-bar__button {
+  flex-shrink: 0;
+
+  padding: 6px 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #f2f2f2;
+  color: #0f0f0f;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.category-bar__button:hover {
+  background: #e5e5e5;
+}
+
+.category-bar__button--active {
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+/* ==========================================
+   SCROLL ARROW BUTTONS (ABSOLUTE POSITIONED)
+========================================== */
+
+.category-bar__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: #0f0f0f;
+
+  cursor: pointer;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.category-bar__arrow:hover {
+  background: #ffffff;
+}
+
+.category-bar__arrow i {
+  font-size: 22px;
+}
+
+.category-bar__arrow--left {
+  left: 8px;
+}
+
+.category-bar__arrow--right {
+  right: 8px;
+}
+
+/* Visible state — JS toggles this on when scrollable content overflows */
+.category-bar__wrapper--scrollable .category-bar__arrow {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hidden state — JS adds when arrow reaches scroll extreme */
+.category-bar__arrow--hidden {
+  opacity: 0;
+  pointer-events: none;
+}

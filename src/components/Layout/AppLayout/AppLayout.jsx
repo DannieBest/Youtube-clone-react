@@ -11,10 +11,7 @@ function AppLayout() {
       <div className='app-layout'>
         <Sidebar />
 
-        <main className='main-content'>
-          <MainContent />
-
-        </main>
+         <MainContent />
 
       </div>
 

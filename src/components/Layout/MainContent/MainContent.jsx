@@ -1,10 +1,11 @@
+import CategoryBar from '../../UI/CategoryBar/CategoryBar';
 import './MainContent.css';
 
 function MainContent () {
   return (
-    <section className='homepage'>
-      
-    </section>
+    <main className='main-content'>
+      <CategoryBar />
+    </main>
   )  
 }
 
