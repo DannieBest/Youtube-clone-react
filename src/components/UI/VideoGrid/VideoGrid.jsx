@@ -10,6 +10,12 @@ function VideoGrid() {
       <VideoCard />
       <VideoCard />
       <VideoCard />
+      <VideoCard />
+      <VideoCard />
+      <VideoCard />
+      <VideoCard />
+      <VideoCard />
+      <VideoCard />
     </section>
   );
 }
