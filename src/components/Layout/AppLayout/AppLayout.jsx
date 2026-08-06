@@ -12,11 +12,10 @@ function AppLayout() {
         <Sidebar />
 
          <MainContent />
-
       </div>
 
     </div>
   )
 }
 
-export default AppLayout
+export default AppLayout;
