@@ -34,6 +34,8 @@ const videos = [
     channelImage: channel_1,
     views: "3.4M views",
     uploaded: "6 months ago",
+    duration: "14:20",
+    verified: true,
   },
   {
     id: 2,
@@ -43,6 +45,8 @@ const videos = [
     channelImage: channel_2,
     views: "19M views",
     uploaded: "4 years ago",
+    duration: "8:22",
+    verified: true,
   },
   {
     id: 3,
@@ -52,6 +56,8 @@ const videos = [
     channelImage: channel_3,
     views: "12M views",
     uploaded: "1 year ago",
+    duration: "9:13",
+    verified: true,
   },
   {
     id: 4,
@@ -61,6 +67,8 @@ const videos = [
     channelImage: channel_4,
     views: "18M views",
     uploaded: "4 months ago",
+    duration: "22:09",
+    verified: true,
   },
   {
     id: 5,
@@ -70,6 +78,8 @@ const videos = [
     channelImage: channel_5,
     views: "519k views",
     uploaded: "5 years ago",
+    duration: "11:17",
+    verified: true,
   },
   {
     id: 6,
@@ -79,6 +89,8 @@ const videos = [
     channelImage: channel_6,
     views: "141M views",
     uploaded: "1 year ago",
+    duration: "19:59",
+    verified: true,
   },
   {
     id: 7,
@@ -88,6 +100,8 @@ const videos = [
     channelImage: channel_7,
     views: "6.6M views",
     uploaded: "1 year ago",
+    duration: "10:13",
+    verified: true,
   },
   {
     id: 8,
@@ -97,6 +111,8 @@ const videos = [
     channelImage: channel_8,
     views: "3.7M views",
     uploaded: "10 months ago",
+    duration: "7:12",
+    verified: true,
   },
 
   {
@@ -107,6 +123,8 @@ const videos = [
     channelImage: channel_9,
     views: "20M views",
     uploaded: "3 years ago",
+    duration: "13:17",
+    verified: true,
   },
   {
     id: 10,
@@ -116,6 +134,8 @@ const videos = [
     channelImage: channel_10,
     views: "14M views",
     uploaded: "1 year ago",
+    duration: "7:53",
+    verified: true,
   },
   {
     id: 11,
@@ -125,6 +145,8 @@ const videos = [
     channelImage: channel_11,
     views: "3M views",
     uploaded: "1 year ago",
+    duration: "4:10",
+    verified: true,
   },
   {
     id: 12,
@@ -134,6 +156,8 @@ const videos = [
     channelImage: channel_12,
     views: "12M views",
     uploaded: "5 years ago",
+    duration: "4:51",
+    verified: true,
   }
 ];
 
