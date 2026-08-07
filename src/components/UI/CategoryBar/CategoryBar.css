@@ -44,6 +44,44 @@
   display: none;
 }
 
+.category-bar__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+  z-index: 2;
+}
+
+.category-bar__arrow:hover {
+  background-color: rgba(245, 245, 245, 0.95);
+  transform: translateY(-50%) scale(1.02);
+}
+
+.category-bar__arrow i {
+  font-size: 22px;
+}
+
+.category-bar__arrow--left {
+  left: 8px;
+}
+
+.category-bar__arrow--right {
+  right: 8px;
+}
+
 .category-bar__button {
   flex-shrink: 0;
   padding: 8px 16px;

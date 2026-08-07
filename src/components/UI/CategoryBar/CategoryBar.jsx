@@ -8,6 +8,9 @@ function CategoryBar() {
   return (
     <section className="category-bar">
       <div className="category-bar__wrapper">
+        <button class="category-bar__arrow category-bar__arrow--left">
+            <i class="material-icons">keyboard_arrow_left</i>
+        </button>
         <div className="category-bar__container">
           {categories.map((category) => (
             <button
@@ -24,6 +27,9 @@ function CategoryBar() {
             </button>
           ))}
         </div>
+        <button class="category-bar__arrow category-bar__arrow--right">
+          <i class="material-icons">keyboard_arrow_right</i>
+        </button>
       </div>
     </section>
   );
