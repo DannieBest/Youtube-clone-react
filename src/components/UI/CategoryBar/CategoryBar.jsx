@@ -1,50 +1,31 @@
 import './CategoryBar.css';
+import categories from '../../../data/categories';
+import { useState } from 'react';
 
-function CategoryBar () {
+function CategoryBar() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
   return (
-    <div className='category-bar__wrapper'>
-      <button className="category-bar__arrow category-bar__arrow--left">
-      <i className="material-icons">keyboard_arrow_left</i>
-      </button>
-      <nav className="category-bar__container" aria-label="Video categories">
-        <button className="category-bar__button category-bar__button--active">
-          All
-        </button>
-
-        <button className="category-bar__button">Music</button>
-
-        <button className="category-bar__button">Gaming</button>
-
-        <button className="category-bar__button">React</button>
-
-        <button className="category-bar__button">JavaScript</button>
-
-        <button className="category-bar__button">Programming</button>
-
-        <button className="category-bar__button">Live</button>
-
-        <button className="category-bar__button">Podcasts</button>
-
-        <button className="category-bar__button">Afro Beats</button>
-
-        <button className="category-bar__button">Pop Music</button>
-        
-        <button className="category-bar__button">Web Development</button>
-
-        <button className="category-bar__button">News</button>
-
-        <button className="category-bar__button">Recently Uploaded</button>
-
-        <button className="category-bar__button">Watched</button>
-
-        <button className="category-bar__button">New To You</button>
-
-        <button className="category-bar__button">History</button>
-      </nav>
-      <button className="category-bar__arrow category-bar__arrow--right">
-        <i className="material-icons">keyboard_arrow_right</i>
-      </button>
-    </div>
+    <section className="category-bar">
+      <div className="category-bar__wrapper">
+        <div className="category-bar__container">
+          {categories.map((category) => (
+            <button
+              key={category}
+              type="button"
+              className={
+                selectedCategory === category
+                  ? 'category-bar__button category-bar__button--active'
+                  : 'category-bar__button'
+              }
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 

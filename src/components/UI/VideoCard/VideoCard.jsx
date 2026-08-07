@@ -11,7 +11,6 @@ function VideoCard({ video }) {
     views,
     uploaded,
     duration,
-    verified,
   } = video;
 
   return (
