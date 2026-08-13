@@ -1,3 +1,5 @@
+import categories from './categories';
+
 import thumbnail_1 from '../assets/thumbnails/thumbnail-1.webp';
 import thumbnail_2 from '../assets/thumbnails/thumbnail-2.webp';
 import thumbnail_3 from '../assets/thumbnails/thumbnail-3.webp';
@@ -36,6 +38,7 @@ const videos = [
     uploaded: "6 months ago",
     duration: "14:20",
     verified: true,
+    category: categories[8],
   },
   {
     id: 2,
@@ -47,6 +50,7 @@ const videos = [
     uploaded: "4 years ago",
     duration: "8:22",
     verified: true,
+    category: categories[3],
   },
   {
     id: 3,
@@ -58,6 +62,7 @@ const videos = [
     uploaded: "1 year ago",
     duration: "9:13",
     verified: true,
+    category: categories[3],
   },
   {
     id: 4,
@@ -69,6 +74,7 @@ const videos = [
     uploaded: "4 months ago",
     duration: "22:09",
     verified: true,
+    category: categories[11],
   },
   {
     id: 5,
@@ -80,6 +86,7 @@ const videos = [
     uploaded: "5 years ago",
     duration: "11:17",
     verified: true,
+    category: categories[12],
   },
   {
     id: 6,
@@ -91,6 +98,7 @@ const videos = [
     uploaded: "1 year ago",
     duration: "19:59",
     verified: true,
+    category: categories[5],
   },
   {
     id: 7,
@@ -102,6 +110,7 @@ const videos = [
     uploaded: "1 year ago",
     duration: "10:13",
     verified: true,
+    category: categories[15],
   },
   {
     id: 8,
@@ -113,6 +122,7 @@ const videos = [
     uploaded: "10 months ago",
     duration: "7:12",
     verified: true,
+    category: categories[5],
   },
 
   {
@@ -125,6 +135,7 @@ const videos = [
     uploaded: "3 years ago",
     duration: "13:17",
     verified: true,
+    category: categories[3],
   },
   {
     id: 10,
@@ -136,6 +147,7 @@ const videos = [
     uploaded: "1 year ago",
     duration: "7:53",
     verified: true,
+    category: categories[4],
   },
   {
     id: 11,
@@ -147,6 +159,7 @@ const videos = [
     uploaded: "1 year ago",
     duration: "4:10",
     verified: true,
+    category: categories[15],
   },
   {
     id: 12,
@@ -158,6 +171,7 @@ const videos = [
     uploaded: "5 years ago",
     duration: "4:51",
     verified: true,
+    category: categories[6],
   }
 ];
 

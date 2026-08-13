@@ -1,15 +1,13 @@
 import './CategoryBar.css';
 import categories from '../../../data/categories';
-import { useState } from 'react';
 
-function CategoryBar() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+function CategoryBar({ selectedCategory, setSelectedCategory }) {
 
   return (
     <section className="category-bar">
       <div className="category-bar__wrapper">
-        <button class="category-bar__arrow category-bar__arrow--left">
-            <i class="material-icons">keyboard_arrow_left</i>
+        <button className="category-bar__arrow category-bar__arrow--left">
+            <i className="material-icons">keyboard_arrow_left</i>
         </button>
         <div className="category-bar__container">
           {categories.map((category) => (
@@ -27,8 +25,8 @@ function CategoryBar() {
             </button>
           ))}
         </div>
-        <button class="category-bar__arrow category-bar__arrow--right">
-          <i class="material-icons">keyboard_arrow_right</i>
+        <button className="category-bar__arrow category-bar__arrow--right">
+          <i className="material-icons">keyboard_arrow_right</i>
         </button>
       </div>
     </section>
