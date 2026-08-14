@@ -2,7 +2,7 @@ import './VideoGrid.css';
 import  VideoCard from '../VideoCard/VideoCard';
 import videos from '../../../data/videos';
 
-function VideoGrid({ selectedCategory }) {
+function VideoGrid({ selectedCategory}) {
 
   const filteredVideos = selectedCategory === 'All'
     ? videos
