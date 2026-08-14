@@ -3,16 +3,25 @@ import videos from '../../data/videos';
 import './WatchPage.css';
 
 function WatchPage() {
+
   const { videoId } = useParams();
 
-  const video = videos.find((video) => video.id === Number(videoId));
+  const video = videos.find(
+    (video) => video.id === Number(videoId)
+  );
 
   if (!video) {
-    return <h1>Video not found!</h1>;
+    return (
+      <section className="watch-page">
+        <h1>Video not found</h1>
+      </section>
+    );
   }
 
   return (
     <section className="watch-page">
+
+      {/* VIDEO PLAYER */}
 
       <div className="watch-page__player">
         <img
@@ -21,9 +30,15 @@ function WatchPage() {
         />
       </div>
 
+
+      {/* VIDEO TITLE */}
+
       <h1 className="watch-page__title">
         {video.title}
       </h1>
+
+
+      {/* CHANNEL INFORMATION */}
 
       <div className="watch-page__channel">
 
@@ -32,16 +47,25 @@ function WatchPage() {
           alt={video.channel}
         />
 
-        <div>
+        <div className="watch-page__channel-info">
           <h3>{video.channel}</h3>
           <p>1.2M subscribers</p>
         </div>
 
+        <button className="watch-page__subscribe">
+          Subscribe
+        </button>
+
       </div>
 
-      <p className="watch-page__stats">
-        {video.views} · {video.uploaded}
-      </p>
+
+      {/* VIDEO STATS */}
+
+      <div className="watch-page__stats">
+        <span>{video.views}</span>
+        <span> · </span>
+        <span>{video.uploaded}</span>
+      </div>
 
     </section>
   );
