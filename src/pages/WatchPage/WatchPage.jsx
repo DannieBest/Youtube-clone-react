@@ -3,7 +3,6 @@ import videos from '../../data/videos';
 import './WatchPage.css';
 
 function WatchPage() {
-
   const { videoId } = useParams();
 
   const video = videos.find(
@@ -12,62 +11,123 @@ function WatchPage() {
 
   if (!video) {
     return (
-      <section className="watch-page">
+      <main className="watch-page">
         <h1>Video not found</h1>
-      </section>
+      </main>
     );
   }
 
   return (
-    <section className="watch-page">
+    <main className="watch-page">
 
-      {/* VIDEO PLAYER */}
-
-      <div className="watch-page__player">
+      {/* Video Player */}
+      <section className="watch-page__player">
         <img
           src={video.thumbnail}
           alt={video.title}
         />
-      </div>
 
+        <span className="watch-page__duration">
+          {video.duration}
+        </span>
+      </section>
 
-      {/* VIDEO TITLE */}
+      {/* Video Information */}
+      <section className="watch-page__info">
 
-      <h1 className="watch-page__title">
-        {video.title}
-      </h1>
+        <h1 className="watch-page__title">
+          {video.title}
+        </h1>
 
+        <div className="watch-page__meta">
 
-      {/* CHANNEL INFORMATION */}
+          {/* Channel */}
+          <div className="watch-page__channel">
 
-      <div className="watch-page__channel">
+            <img
+              src={video.channelImage}
+              alt={video.channel}
+            />
 
-        <img
-          src={video.channelImage}
-          alt={video.channel}
-        />
+            <div className="watch-page__channel-info">
+              <h3>{video.channel}</h3>
+              <p>1.2M subscribers</p>
+            </div>
 
-        <div className="watch-page__channel-info">
-          <h3>{video.channel}</h3>
-          <p>1.2M subscribers</p>
+          </div>
+
+          {/* Subscribe */}
+          <button className="watch-page__subscribe">
+            Subscribe
+          </button>
+
+          {/* Actions */}
+          <div className="watch-page__actions">
+
+            <button>
+              <i className="material-icons">
+                thumb_up
+              </i>
+              Like
+            </button>
+
+            <button>
+              <i className="material-icons">
+                share
+              </i>
+              Share
+            </button>
+
+            <button>
+              <i className="material-icons">
+                more_horiz
+              </i>
+            </button>
+
+          </div>
+
         </div>
 
-        <button className="watch-page__subscribe">
-          Subscribe
-        </button>
+        {/* Stats */}
+        <div className="watch-page__stats">
+          {video.views} · {video.uploaded}
+        </div>
 
-      </div>
+        {/* Description */}
+        <div className="watch-page__description">
 
+          <p>
+            This is the video description. We will connect
+            this section to our video data later.
+          </p>
 
-      {/* VIDEO STATS */}
+        </div>
 
-      <div className="watch-page__stats">
-        <span>{video.views}</span>
-        <span> · </span>
-        <span>{video.uploaded}</span>
-      </div>
+      </section>
 
-    </section>
+      {/* Comments */}
+      <section className="watch-page__comments">
+
+        <h2>Comments</h2>
+
+        <div className="watch-page__comment">
+          <img
+            src={video.channelImage}
+            alt=""
+          />
+
+          <div>
+            <strong>{video.channel}</strong>
+            <p>
+              This is a sample comment for our YouTube
+              clone project.
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
   );
 }
 
