@@ -65,7 +65,7 @@
 }
 
 .category-bar__arrow:hover {
-  background-color: rgba(245, 245, 245, 0.95);
+  background-color: var(--hover);
   transform: translateY(-50%) scale(1.02);
 }
 

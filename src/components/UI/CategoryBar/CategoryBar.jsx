@@ -1,15 +1,52 @@
 import './CategoryBar.css';
 import categories from '../../../data/categories';
+import { useRef, useState } from 'react';
 
-function CategoryBar({ selectedCategory, setSelectedCategory }) {
+function CategoryBar() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const categoryContainerRef = useRef(null);
+
+  const scrollLeft = () => {
+    categoryContainerRef.current.scrollBy({
+      left: -300,
+      behavior: 'smooth',
+    });
+  };
+
+  const scrollRight = () => {
+    categoryContainerRef.current.scrollBy({
+      left: 300,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <section className="category-bar">
+
       <div className="category-bar__wrapper">
-        <button className="category-bar__arrow category-bar__arrow--left">
-            <i className="material-icons">keyboard_arrow_left</i>
+
+        {/* LEFT ARROW */}
+
+        <button
+          type="button"
+          className="category-bar__arrow category-bar__arrow--left"
+          onClick={scrollLeft}
+          aria-label="Scroll categories left"
+        >
+          <i className="material-icons">
+            keyboard_arrow_left
+          </i>
         </button>
-        <div className="category-bar__container">
+
+
+        {/* CATEGORY CONTAINER */}
+
+        <div
+          className="category-bar__container"
+          ref={categoryContainerRef}
+        >
+
           {categories.map((category) => (
             <button
               key={category}
@@ -24,11 +61,25 @@ function CategoryBar({ selectedCategory, setSelectedCategory }) {
               {category}
             </button>
           ))}
+
         </div>
-        <button className="category-bar__arrow category-bar__arrow--right">
-          <i className="material-icons">keyboard_arrow_right</i>
+
+
+        {/* RIGHT ARROW */}
+
+        <button
+          type="button"
+          className="category-bar__arrow category-bar__arrow--right"
+          onClick={scrollRight}
+          aria-label="Scroll categories right"
+        >
+          <i className="material-icons">
+            keyboard_arrow_right
+          </i>
         </button>
+
       </div>
+
     </section>
   );
 }
