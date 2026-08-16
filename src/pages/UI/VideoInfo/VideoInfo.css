@@ -1,0 +1,159 @@
+/* ==========================================
+   VIDEO INFORMATION
+========================================== */
+
+.video-info {
+  padding-top: 16px;
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.video-info__title {
+  margin-bottom: 16px;
+
+  color: #0f0f0f;
+
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+
+/* ==========================================
+   META SECTION
+========================================== */
+
+.video-info__meta {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+}
+
+
+/* ==========================================
+   CHANNEL
+========================================== */
+
+.video-info__channel {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.video-info__channel img {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.video-info__channel-info h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.video-info__channel-info p {
+  margin-top: 3px;
+
+  color: #606060;
+
+  font-size: 13px;
+}
+
+/* ==========================================
+   SUBSCRIBE BUTTON
+========================================== */
+
+.video-info__subscribe {
+  padding: 10px 18px;
+
+  border: none;
+  border-radius: 20px;
+
+  background: #0f0f0f;
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.video-info__subscribe:hover {
+  background: #272727;
+}
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.video-info__actions {
+  display: flex;
+  align-items: center;
+
+  margin-left: auto;
+
+  gap: 8px;
+}
+
+.video-info__actions button {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 9px 14px;
+
+  border: none;
+  border-radius: 20px;
+
+  background: #f2f2f2;
+
+  cursor: pointer;
+}
+
+.video-info__actions button:hover {
+  background: #e5e5e5;
+}
+
+.video-info__actions i {
+  font-size: 20px;
+}
+
+/* ==========================================
+   STATS
+========================================== */
+
+.video-info__stats {
+  margin-top: 16px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #606060;
+}
+
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.video-info__description {
+  margin-top: 16px;
+
+  padding: 16px;
+
+  background: #f2f2f2;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
