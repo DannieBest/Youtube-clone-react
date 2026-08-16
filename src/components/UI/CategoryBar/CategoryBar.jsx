@@ -1,52 +1,87 @@
 import './CategoryBar.css';
 import categories from '../../../data/categories';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-function CategoryBar() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+function CategoryBar({ selectedCategory, setSelectedCategory }) {
 
-  const categoryContainerRef = useRef(null);
+  const containerRef = useRef(null);
 
-  const scrollLeft = () => {
-    categoryContainerRef.current.scrollBy({
-      left: -300,
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+
+  const updateScrollButtons = () => {
+    const container = containerRef.current;
+
+    if (!container) return;
+
+    const { scrollLeft, scrollWidth, clientWidth } = container;
+
+    setCanScrollLeft(scrollLeft > 0);
+
+    setCanScrollRight(
+      scrollLeft + clientWidth < scrollWidth - 1
+    );
+  };
+
+
+  useEffect(() => {
+    const container = containerRef.current;
+
+    if (!container) return;
+
+    updateScrollButtons();
+
+    container.addEventListener('scroll', updateScrollButtons);
+
+    window.addEventListener('resize', updateScrollButtons);
+
+    return () => {
+      container.removeEventListener('scroll', updateScrollButtons);
+      window.removeEventListener('resize', updateScrollButtons);
+    };
+  }, []);
+
+
+  const scrollCategories = (direction) => {
+    const container = containerRef.current;
+
+    if (!container) return;
+
+    const scrollAmount = 300;
+
+    container.scrollBy({
+      left: direction === 'left'
+        ? -scrollAmount
+        : scrollAmount,
       behavior: 'smooth',
     });
   };
 
-  const scrollRight = () => {
-    categoryContainerRef.current.scrollBy({
-      left: 300,
-      behavior: 'smooth',
-    });
-  };
 
   return (
     <section className="category-bar">
 
       <div className="category-bar__wrapper">
 
-        {/* LEFT ARROW */}
+        {canScrollLeft && (
+          <button
+            type="button"
+            className="category-bar__arrow category-bar__arrow--left"
+            onClick={() => scrollCategories('left')}
+            aria-label="Scroll categories left"
+          >
+            <i className="material-icons">
+              keyboard_arrow_left
+            </i>
+          </button>
+        )}
 
-        <button
-          type="button"
-          className="category-bar__arrow category-bar__arrow--left"
-          onClick={scrollLeft}
-          aria-label="Scroll categories left"
-        >
-          <i className="material-icons">
-            keyboard_arrow_left
-          </i>
-        </button>
-
-
-        {/* CATEGORY CONTAINER */}
 
         <div
           className="category-bar__container"
-          ref={categoryContainerRef}
+          ref={containerRef}
         >
-
           {categories.map((category) => (
             <button
               key={category}
@@ -61,22 +96,21 @@ function CategoryBar() {
               {category}
             </button>
           ))}
-
         </div>
 
 
-        {/* RIGHT ARROW */}
-
-        <button
-          type="button"
-          className="category-bar__arrow category-bar__arrow--right"
-          onClick={scrollRight}
-          aria-label="Scroll categories right"
-        >
-          <i className="material-icons">
-            keyboard_arrow_right
-          </i>
-        </button>
+        {canScrollRight && (
+          <button
+            type="button"
+            className="category-bar__arrow category-bar__arrow--right"
+            onClick={() => scrollCategories('right')}
+            aria-label="Scroll categories right"
+          >
+            <i className="material-icons">
+              keyboard_arrow_right
+            </i>
+          </button>
+        )}
 
       </div>
 
