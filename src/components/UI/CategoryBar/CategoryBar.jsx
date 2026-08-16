@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 function CategoryBar({ selectedCategory, setSelectedCategory }) {
 
   const containerRef = useRef(null);
+  const categoryRefs = useRef({});
 
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
@@ -42,6 +43,17 @@ function CategoryBar({ selectedCategory, setSelectedCategory }) {
     };
   }, []);
 
+  useEffect(() => {
+    const selectedButton = categoryRefs.current[selectedCategory];
+
+    if (!selectedButton) return;
+
+    selectedButton.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center',
+    });
+  }, [selectedCategory]);
 
   const scrollCategories = (direction) => {
     const container = containerRef.current;
@@ -85,6 +97,9 @@ function CategoryBar({ selectedCategory, setSelectedCategory }) {
           {categories.map((category) => (
             <button
               key={category}
+              ref={(element) => {
+                categoryRefs.current[category] = element;
+              }}
               type="button"
               className={
                 selectedCategory === category
