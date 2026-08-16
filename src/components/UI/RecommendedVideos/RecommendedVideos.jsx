@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import videos from '../../../data/videos';
 import './RecommendedVideos.css';
 
@@ -18,7 +19,8 @@ function RecommendedVideos({ currentVideoId }) {
 
         {recommendedVideos.map((video) => (
 
-          <article
+          <Link
+            to={`/watch/${video.id}`}
             className="recommended-video"
             key={video.id}
           >
@@ -53,7 +55,7 @@ function RecommendedVideos({ currentVideoId }) {
 
             </div>
 
-          </article>
+          </Link>
 
         ))}
 

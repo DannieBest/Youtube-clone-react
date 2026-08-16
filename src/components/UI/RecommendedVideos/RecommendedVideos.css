@@ -1,6 +1,8 @@
 .recommended-videos {
   width: 360px;
   flex-shrink: 0;
+  text-decoration: none;
+  color: inherit;
 }
 
 .recommended-videos__heading {
