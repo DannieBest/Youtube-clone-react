@@ -1,3 +1,4 @@
+import VideoActions from '../VideoActions/VideoActions';
 import './VIdeoInfo.css';
 
 function VideoInfo({ video }) {
@@ -9,50 +10,32 @@ function VideoInfo({ video }) {
       </h1>
 
       <div className="video-info__meta">
+        
+        <div className="video-info__channel-left">
+          {/* Channel */}
+          <div className="video-info__channel">
+            <img
+              src={video.channelImage}
+              alt={video.channel}
+            />
 
-        {/* Channel */}
-        <div className="video-info__channel">
+            <div className="video-info__channel-info">
+              <h3>{video.channel}</h3>
+              <p>1.2M subscribers</p>
+            </div>
 
-          <img
-            src={video.channelImage}
-            alt={video.channel}
-          />
-
-          <div className="video-info__channel-info">
-            <h3>{video.channel}</h3>
-            <p>1.2M subscribers</p>
           </div>
 
+          {/* Subscribe */}
+          <button className="video-info__subscribe">
+            Subscribe
+          </button>
+
         </div>
-
-        {/* Subscribe */}
-        <button className="video-info__subscribe">
-          Subscribe
-        </button>
-
-        {/* Actions */}
-        <div className="video-info__actions">
-
-          <button>
-            <i className="material-icons">
-              thumb_up
-            </i>
-            Like
-          </button>
-
-          <button>
-            <i className="material-icons">
-              share
-            </i>
-            Share
-          </button>
-
-          <button>
-            <i className="material-icons">
-              more_horiz
-            </i>
-          </button>
-
+        
+        <div className="video-info__channel-right">
+          {/* Actions */}
+          <VideoActions video={video} />
         </div>
 
       </div>

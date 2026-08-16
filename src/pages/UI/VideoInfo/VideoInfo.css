@@ -30,6 +30,8 @@
   align-items: center;
 
   gap: 16px;
+
+  justify-content: space-between;
 }
 
 
@@ -40,6 +42,14 @@
 .video-info__channel {
   display: flex;
   align-items: center;
+
+  gap: 12px;
+}
+
+.video-info__channel-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   gap: 12px;
 }
@@ -100,6 +110,7 @@
   margin-left: auto;
 
   gap: 8px;
+  
 }
 
 .video-info__actions button {

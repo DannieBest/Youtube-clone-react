@@ -1,0 +1,93 @@
+import { useState } from "react";
+import './VideoActions.css';
+
+function VideoActions({ video }) {
+
+  const [liked, setLiked] = useState(false);
+  const [disliked, setDisliked] = useState(false);
+
+  const handleLike = () => {
+    setLiked(!liked);
+    setDisliked(false);
+  }
+
+  const handleDislike = () => {
+    setDisliked(!disliked);
+    setLiked(false);
+  }
+
+  return (
+    <div className="video-actions">
+
+      {/* Like / Dislike */}
+      <div className="video-actions__like-group">
+
+        <button
+          className={liked ? 'active' : ''}
+          onClick={handleLike}
+        >
+          <i className="material-icons">
+            thumb_up
+          </i>
+
+          <span>
+            {video.likes || 0}
+          </span>
+        </button>
+
+        <button
+          className={disliked ? 'active' : ''}
+          onClick={handleDislike}
+        >
+          <i className="material-icons">
+            thumb_down
+          </i>
+        </button>
+
+      </div>
+
+      {/* Share */}
+      <button className="video-actions__button">
+        <i className="material-icons">
+          share
+        </i>
+
+        <span>
+          Share
+        </span>
+      </button>
+
+      {/* Download */}
+      <button className="video-actions__button">
+        <i className="material-icons">
+          download
+        </i>
+
+        <span>
+          Download
+        </span>
+      </button>
+
+      {/* Save */}
+      <button className="video-actions__button">
+        <i className="material-icons">
+          bookmark
+        </i>
+
+        <span>
+          Save
+        </span>
+      </button>
+
+      {/* More */}
+      <button className="video-actions__more">
+        <i className="material-icons">
+          more_horiz
+        </i>
+      </button>
+
+    </div>
+  );
+}
+
+export default VideoActions;
