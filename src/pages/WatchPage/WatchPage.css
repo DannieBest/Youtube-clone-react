@@ -3,9 +3,24 @@
 ========================================== */
 
 .watch-page {
-  max-width: 1200px;
+  max-width: auto;
   margin: 0;
   padding: 24px;
+
+}
+
+.watch-page__content {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 24px;
+  margin: 0;
+  
+}
+
+.watch-page__main {
+  flex: 1;
+  min-width: 0;
 }
 
 
