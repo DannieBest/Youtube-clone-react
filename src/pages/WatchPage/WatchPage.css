@@ -278,3 +278,147 @@
   font-size: 14px;
   line-height: 1.5;
 }
+
+/* ==========================================
+   RESPONSIVE WATCH PAGE
+========================================== */
+
+@media (max-width: 1000px) {
+
+  .watch-page__content {
+    flex-direction: column;
+  }
+
+  .watch-page__main {
+    width: 100%;
+  }
+
+  .recommended-videos {
+    width: 100%;
+  }
+
+  .recommended-videos__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .recommended-video {
+    flex-direction: column;
+  }
+
+  .recommended-video__thumbnail {
+    width: 100%;
+  }
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+  .watch-page {
+    padding: 16px;
+  }
+
+  .watch-page__player {
+    border-radius: 8px;
+  }
+
+  .watch-page__title {
+    font-size: 18px;
+  }
+
+  .watch-page__meta {
+    flex-wrap: wrap;
+  }
+
+  .watch-page__actions {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .watch-page__actions button {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .recommended-videos__list {
+    grid-template-columns: 1fr;
+  }
+
+  .recommended-video {
+    flex-direction: row;
+  }
+
+  .recommended-video__thumbnail {
+    width: 180px;
+  }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+  .watch-page {
+    padding: 0;
+  }
+
+  .watch-page__player {
+    border-radius: 0;
+  }
+
+  .watch-page__info,
+  .watch-page__comments,
+  .recommended-videos {
+    padding: 0 12px;
+  }
+
+  .watch-page__title {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  .watch-page__meta {
+    gap: 12px;
+  }
+
+  .watch-page__channel {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .watch-page__subscribe {
+    padding: 9px 14px;
+  }
+
+  .watch-page__actions {
+    overflow-x: auto;
+  }
+
+  .watch-page__actions button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .watch-page__description {
+    border-radius: 8px;
+  }
+
+  .recommended-videos {
+    margin-top: 24px;
+  }
+
+  .recommended-video__thumbnail {
+    width: 140px;
+  }
+
+  .recommended-video__info h3 {
+    font-size: 13px;
+  }
+}

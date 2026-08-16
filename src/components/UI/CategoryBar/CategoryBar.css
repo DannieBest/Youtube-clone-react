@@ -11,7 +11,6 @@
   width: 100%;
 
   background: var(--background);
-  border: 1px solid var(--border-color);
 }
 
 .category-bar__wrapper {

@@ -1,7 +1,6 @@
 .sidebar {
   display: block;
   height: calc(100vh - var(--header-height));
-  border-right: 1px solid #ddd;
   width: var(--sidebar-width);
   position: fixed;
   top: var(--header-height);
