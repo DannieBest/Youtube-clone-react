@@ -27,7 +27,11 @@ function WatchPage() {
 
   return (
     <main className="watch-page">
-      
+      {/* Category Navigation */}
+      <CategoryBar
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
 
       <div className="watch-page__content">
 

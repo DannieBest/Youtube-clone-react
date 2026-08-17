@@ -1,19 +1,30 @@
 import Header from '../Header/Header';
 import Sidebar from '../Sidebar/Sidebar';
+import { Outlet, useLocation } from 'react-router-dom';
+
 import './AppLayout.css';
 
-function AppLayout({children, showSidebar = false}) {
+function AppLayout() {
+
+  const location = useLocation();
+
+  const showSidebar = location.pathname === '/';
+
   return (
-    <div className='app'>
+    <div className="app">
+
       <Header />
 
-      <div className='app-layout'>
+      <div className="app-layout">
+
         {showSidebar && <Sidebar />}
-        {children}
+
+        <Outlet />
+
       </div>
 
     </div>
-  )
+  );
 }
 
 export default AppLayout;

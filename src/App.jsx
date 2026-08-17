@@ -11,25 +11,22 @@ function App() {
 
       <Routes>
 
-        {/* Home Page */}
-        <Route
-          path="/"
-          element={
-            <AppLayout showSidebar>
-              <MainContent />
-            </AppLayout>
-          }
-        />
+        {/* Shared application layout */}
+        <Route element={<AppLayout />}>
 
-        {/* Watch Page */}
-        <Route
-          path="/watch/:videoId"
-          element={
-            <AppLayout>
-              <WatchPage />
-            </AppLayout>
-          }
-        />
+          {/* Home */}
+          <Route
+            path="/"
+            element={<MainContent />}
+          />
+
+          {/* Watch page */}
+          <Route
+            path="/watch/:videoId"
+            element={<WatchPage />}
+          />
+
+        </Route>
 
       </Routes>
 
