@@ -1,4 +1,7 @@
 import { useParams } from 'react-router-dom';
+import { useState } from 'react';
+
+import CategoryBar from '../../components/UI/CategoryBar/CategoryBar';
 import videos from '../../data/videos';
 import RecommendedVideos from '../../components/UI/RecommendedVideos/RecommendedVideos';
 import WatchVideo from '../UI/WatchVideo/WatchVideo';
@@ -8,6 +11,7 @@ import './WatchPage.css';
 
 function WatchPage() {
   const { videoId } = useParams();
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   const video = videos.find(
     (video) => video.id === Number(videoId)
@@ -23,6 +27,7 @@ function WatchPage() {
 
   return (
     <main className="watch-page">
+      
 
       <div className="watch-page__content">
 
