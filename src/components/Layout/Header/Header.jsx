@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Header.css';
 import profile_pic from '../../../assets/channel-images/profile.jpeg';
 
@@ -8,12 +9,12 @@ function Header() {
         <button className="sidebar__toggle" aria-label='toggle sidebar'>
           <i className="material-icons">menu</i>
         </button>
-        <a href="#" className="logo">
+        <Link to="/" className="logo">
           <img 
             src="/youtube-image.png" alt="Youtube-logo" 
             loading='lazy'
           />
-        </a>
+        </Link>
       </div>
 
       <div className="header__center">

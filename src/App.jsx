@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import AppLayout from './components/Layout/AppLayout/AppLayout';
-import MainContent from './components/Layout/MainContent/MainContent';
+import HomePage from './pages/HomePage/HomePage';
 import WatchPage from './pages/WatchPage/WatchPage';
 
 function App() {
@@ -11,16 +11,10 @@ function App() {
 
       <Routes>
 
-        {/* Shared application layout */}
         <Route element={<AppLayout />}>
 
-          {/* Home */}
-          <Route
-            path="/"
-            element={<MainContent />}
-          />
+          <Route path="/" element={<HomePage />} />
 
-          {/* Watch page */}
           <Route
             path="/watch/:videoId"
             element={<WatchPage />}
