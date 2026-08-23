@@ -100,7 +100,12 @@
   background: #272727;
 }
 
-
+.video-info__subscribe.subscribed {
+  background-color: #e5e5e5;
+  color: #0f0f0f;
+  font-size: 14px;
+  font-weight: 600;
+}
 
 /* ==========================================
    ACTION BUTTONS

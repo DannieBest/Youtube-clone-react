@@ -40,7 +40,7 @@ function VideoInfo({ video }) {
             }`}
             onClick={handleSubscribe}
           >
-            Subscribe
+            {subscribed ? 'Subscribed' : 'Subscribe'}
           </button>
 
         </div>
