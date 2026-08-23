@@ -6,6 +6,11 @@
   
 }
 
+.video-actions__like-group .action-active {
+  background: #bababa;
+  font-weight: 600;
+}
+
 .video-actions button {
   border: none;
   cursor: pointer;

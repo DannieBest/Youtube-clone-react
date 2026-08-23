@@ -1,7 +1,14 @@
+import { useState } from 'react';
 import VideoActions from '../VideoActions/VideoActions';
-import './VIdeoInfo.css';
+import './VideoInfo.css';
 
 function VideoInfo({ video }) {
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = () => {
+    setSubscribed((prevSubscribed) => !prevSubscribed);
+  };
+
   return (
     <section className="video-info">
 
@@ -27,7 +34,12 @@ function VideoInfo({ video }) {
           </div>
 
           {/* Subscribe */}
-          <button className="video-info__subscribe">
+          <button
+            className={`video-info__subscribe ${
+              subscribed ? 'subscribed' : ''
+            }`}
+            onClick={handleSubscribe}
+          >
             Subscribe
           </button>
 

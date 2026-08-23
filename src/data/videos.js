@@ -39,6 +39,7 @@ const videos = [
     duration: "14:20",
     verified: true,
     category: categories[8],
+    likes: 245,
   },
   {
     id: 2,
@@ -51,6 +52,7 @@ const videos = [
     duration: "8:22",
     verified: true,
     category: categories[3],
+    likes: 1200000,
   },
   {
     id: 3,
@@ -63,6 +65,7 @@ const videos = [
     duration: "9:13",
     verified: true,
     category: categories[3],
+    likes: 89,
   },
   {
     id: 4,
@@ -75,6 +78,7 @@ const videos = [
     duration: "22:09",
     verified: true,
     category: categories[11],
+    likes: 1500000,
   },
   {
     id: 5,
@@ -87,6 +91,7 @@ const videos = [
     duration: "11:17",
     verified: true,
     category: categories[12],
+    likes: 320,
   },
   {
     id: 6,
@@ -99,6 +104,7 @@ const videos = [
     duration: "19:59",
     verified: true,
     category: categories[5],
+    likes: 3200,
   },
   {
     id: 7,
@@ -111,6 +117,7 @@ const videos = [
     duration: "10:13",
     verified: true,
     category: categories[15],
+    likes: 420000,
   },
   {
     id: 8,
@@ -123,6 +130,7 @@ const videos = [
     duration: "7:12",
     verified: true,
     category: categories[5],
+    likes: 18,
   },
 
   {
@@ -136,6 +144,7 @@ const videos = [
     duration: "13:17",
     verified: true,
     category: categories[3],
+    likes: 1800000,
   },
   {
     id: 10,
@@ -148,6 +157,7 @@ const videos = [
     duration: "7:53",
     verified: true,
     category: categories[4],
+    likes: 750,
   },
   {
     id: 11,
@@ -160,6 +170,7 @@ const videos = [
     duration: "4:10",
     verified: true,
     category: categories[15],
+    likes: 165,
   },
   {
     id: 12,
@@ -172,6 +183,7 @@ const videos = [
     duration: "4:51",
     verified: true,
     category: categories[6],
+    likes: 610,
   }
 ];
 
