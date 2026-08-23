@@ -2,13 +2,37 @@ import { useState } from 'react';
 import { formatNumber } from '../utils/formatNumber';
 import './VideoActions.css';
 
+import facebookIcon from '../../../../src/assets/SVG/Facebook_icon.webp';
+import whatsappIcon from '../../../../src/assets/SVG/whatsapp_svg.jpg';
+import xIcon from '../../../../src/assets/SVG/x_svg.png';
+
 function VideoActions({ video }) {
   const [liked, setLiked] = useState(false);
   const [disliked, setDisliked] = useState(false);
 
   const [likeCount, setLikeCount] = useState(Number(video.likes) || 0);
 
- const [saved, setSaved] = useState(false);
+  const [saved, setSaved] = useState(false);
+
+  const [showShared, setShowShared] = useState(false);
+
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyLink = async () => {
+    const videoUrl = `${window.location.origin}/watch/${video.id}`;
+
+    try {
+      await navigator.clipboard.writeText(videoUrl);
+
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+
+    } catch (error) {
+      console.error('Failed to copy video link:', error);
+    }
+  };
 
   const handleLike = () => {
     if (liked) {
@@ -42,7 +66,11 @@ function VideoActions({ video }) {
 
   const handleSaved = () => { 
     setSaved(prevSaved => !prevSaved);
-   }
+  }
+
+  const handleShared = () => {
+    setShowShared(prevShared => !prevShared);
+  }
 
   return (
     <div className="video-actions">
@@ -63,11 +91,57 @@ function VideoActions({ video }) {
       </div>
 
       {/* Share */}
-      <button className="video-actions__button">
-        <i className="material-icons">share</i>
+      <button
+        className="video-actions__button"
+        onClick={handleShared}
+      >
+        <i className="material-icons">
+          share
+        </i>
 
-        <span>Share</span>
+        <span>
+          Share
+        </span>
       </button>
+
+      {showShared && (
+        <div className="video-actions__share-menu">
+
+          <button onClick={handleCopyLink}>
+            <i className="material-icons">
+              {copied ? 'check' : 'link'}
+            </i>
+            <span>
+              {copied ? 'Copied!' : 'Copy Link'}
+            </span>
+          </button>
+
+          <button>
+            <img
+              src={facebookIcon} 
+              alt="faceebook icon" 
+            />
+            <span>Facebook</span>
+          </button>
+
+          <button>
+            <img 
+              src={xIcon} 
+              alt="x icon" 
+            />
+            <span>X</span>
+          </button>
+
+          <button>
+            <img 
+              src={whatsappIcon} 
+              alt="" 
+            />
+            <span>WhatsApp</span>
+          </button>
+
+        </div>
+      )}
 
       {/* Download */}
       <button className="video-actions__button">

@@ -1,9 +1,9 @@
 .video-actions {
   display: flex;
   align-items: center;
-  
+  position: relative;
+
   gap: 8px;
-  
 }
 
 .video-actions__like-group .action-active {
@@ -55,13 +55,65 @@
   border-radius: 0;
 }
 
-.video-actions__like-group button.active {
-  background: #d9d9d9;
-}
-
 .video-actions__more {
   width: 40px;
   height: 40px;
 
   padding: 0 !important;
+}
+
+.video-actions__share-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 160px;
+
+  padding: 8px;
+
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  z-index: 10;
+}
+
+.video-actions__share-menu button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 10px;
+
+  width: 100%;
+
+  padding: 10px;
+
+  border: none;
+  background: none;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.video-actions__share-menu img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  background: transparent;
+  margin-left: 12px;
+}
+
+.video-actions__share-menu i {
+  margin-left: 12px;
+}
+
+.video-actions__share-menu button:hover {
+  background-color: #f2f2f2;
 }
