@@ -82,22 +82,36 @@
 ========================================== */
 
 .video-info__subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   padding: 10px 18px;
 
   border: none;
-  border-radius: 20px;
+  border-radius: 24px;
 
   background: #0f0f0f;
   color: #fff;
 
   font-size: 14px;
-  font-weight: 500;
-
+  font-weight: 600;
   cursor: pointer;
+
+  white-space: nowrap; /* Prevents text wrap */
+  transition: background-color 0.2s ease;
+}
+
+.video-info__subscribe .material-icons {
+  font-size: 20px;
 }
 
 .video-info__subscribe:hover {
   background: #272727;
+}
+
+.video-info__subscribe.subscribed:hover {
+  background-color: var(--hover);
 }
 
 .video-info__subscribe.subscribed {

@@ -40,7 +40,12 @@ function VideoInfo({ video }) {
             }`}
             onClick={handleSubscribe}
           >
-            {subscribed ? 'Subscribed' : 'Subscribe'}
+            {subscribed && (
+              <i className="material-icons">notifications_active</i>
+            )}
+            <span>
+              {subscribed ? 'Subscribed' : 'Subscribe'}
+            </span>
           </button>
 
         </div>

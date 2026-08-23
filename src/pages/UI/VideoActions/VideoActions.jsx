@@ -8,7 +8,7 @@ function VideoActions({ video }) {
 
   const [likeCount, setLikeCount] = useState(Number(video.likes) || 0);
 
- 
+ const [saved, setSaved] = useState(false);
 
   const handleLike = () => {
     if (liked) {
@@ -39,6 +39,10 @@ function VideoActions({ video }) {
       setLikeCount((previousCount) => previousCount - 1);
     }
   };
+
+  const handleSaved = () => { 
+    setSaved(prevSaved => !prevSaved);
+   }
 
   return (
     <div className="video-actions">
@@ -73,10 +77,19 @@ function VideoActions({ video }) {
       </button>
 
       {/* Save */}
-      <button className="video-actions__button">
-        <i className="material-icons">bookmark</i>
+      <button
+        className={`video-actions__button ${
+          saved ? 'action-active' : ''
+        }`}
+        onClick={handleSaved}
+      >
+        <i className="material-icons">
+          {saved ? 'bookmark_added' : 'bookmark'}
+        </i>
 
-        <span>Save</span>
+        <span>
+          {saved ? 'Saved' : 'Save'}
+        </span>
       </button>
 
       {/* More */}
