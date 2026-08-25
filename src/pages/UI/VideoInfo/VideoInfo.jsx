@@ -52,7 +52,7 @@ function VideoInfo({ video }) {
         
         <div className="video-info__channel-right">
           {/* Actions */}
-          <VideoActions video={video} />
+          <VideoActions key={video.id} video={video} />
         </div>
 
       </div>

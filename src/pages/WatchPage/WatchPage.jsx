@@ -41,10 +41,10 @@ function WatchPage() {
           <WatchVideo video={video} />
 
           {/* Video Info */}
-          <VideoInfo key={video.id} video={video} />
+          <VideoInfo video={video} />
 
           {/* Comments */}
-          <Comments key={video.id} video={video} />
+          <Comments video={video} />
 
         </div>
 

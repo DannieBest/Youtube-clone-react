@@ -7,7 +7,7 @@ import whatsappIcon from '../../../../src/assets/SVG/whatsapp_svg.jpg';
 import xIcon from '../../../../src/assets/SVG/x_svg.png';
 
 function VideoActions({ video }) {
-  const likedKey = `Liked-${video.id}-saved`; 
+  const likedKey = `Video-${video.id}-liked`; 
 
   const [liked, setLiked] = useState(() => {
     return localStorage.getItem(likedKey) === 'true';
@@ -19,7 +19,8 @@ function VideoActions({ video }) {
 
   const [disliked, setDisliked] = useState(false);
 
-  const [likeCount, setLikeCount] = useState(Number(video.likes) || 0);
+  const likeCount =
+  (Number(video.likes) || 0) + (liked ? 1 : 0);
 
   const savedKey = `Video-${video.id}-saved`;
 
@@ -57,7 +58,6 @@ function VideoActions({ video }) {
   const handleLike = () => {
     if (liked) {
       setLiked(false);
-      setLikeCount((previousCount) => previousCount - 1);
       return;
     }
 
@@ -67,7 +67,6 @@ function VideoActions({ video }) {
       setDisliked(false);
     }
 
-    setLikeCount((previousCount) => previousCount + 1);
   };
 
   const handleDislike = () => {
@@ -80,7 +79,6 @@ function VideoActions({ video }) {
 
     if (liked) {
       setLiked(false);
-      setLikeCount((previousCount) => previousCount - 1);
     }
   };
 
