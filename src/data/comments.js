@@ -15,7 +15,7 @@ const comments = {
   1: [
     {
       id: 101,
-      author: "TechFan99",
+      author: "TechFan 99",
       avatar: channel_3,
       uploaded: "6 days ago",
       text: "This interview really changed how I see AI development! Google is pushing boundaries."
@@ -29,28 +29,28 @@ const comments = {
     },
     {
       id: 103,
-      author: "CodeMaster",
+      author: "Code Master",
       avatar: channel_11,
       uploaded: "2 days ago",
       text: "The part about AI ethics was super insightful. Great questions from Marques!"
     },
     {
       id: 104,
-      author: "FutureThinker",
+      author: "Future Thinker",
       avatar: channel_2,
       uploaded: "3 weeks ago",
       text: "I've watched this three times already. So much knowledge packed into one interview."
     },
     {
       id: 105,
-      author: "DigitalNomad",
+      author: "Digital Nomad",
       avatar: channel_9,
       uploaded: "1 month ago",
       text: "Google's approach to AI safety seems much more thoughtful than competitors."
     },
     {
       id: 106,
-      author: "StartupGuru",
+      author: "Startup Guru",
       avatar: channel_5,
       uploaded: "5 days ago",
       text: "This gives me so many ideas for my own AI startup. Incredible insights!"
@@ -60,14 +60,14 @@ const comments = {
   2: [
     {
       id: 201,
-      author: "GamerPro",
+      author: "Gamer_Pro",
       avatar: channel_4,
       uploaded: "2 days ago",
       text: "I failed so hard at this challenge 😂 Markiplier's reactions are unmatched!"
     },
     {
       id: 202,
-      author: "LaughLover",
+      author: "LaughLover!!!",
       avatar: channel_8,
       uploaded: "1 week ago",
       text: "Markiplier's laugh is actually contagious. I couldn't stop smiling throughout."
@@ -88,14 +88,14 @@ const comments = {
     },
     {
       id: 205,
-      author: "CasualViewer",
+      author: "Casual Viewer",
       avatar: channel_6,
       uploaded: "4 days ago",
       text: "I actually made it through 3 clips before losing. New personal record!"
     },
     {
       id: 206,
-      author: "MemeLord",
+      author: "Meme_Lord",
       avatar: channel_12,
       uploaded: "1 month ago",
       text: "The TikTok compilation this month is absolutely wild. 10/10 content."
@@ -112,35 +112,35 @@ const comments = {
     },
     {
       id: 302,
-      author: "ThrillSeeker",
+      author: "Thrill Seeker",
       avatar: channel_9,
       uploaded: "3 days ago",
       text: "Some of these were actually terrifying to watch. Don't try this at home!"
     },
     {
       id: 303,
-      author: "TikTokAddict",
+      author: "TikTok Addict",
       avatar: channel_2,
       uploaded: "1 week ago",
       text: "I recognize at least 5 of these from my FYP. TikTok algorithm is chaotic."
     },
     {
       id: 304,
-      author: "PhysicsNerd",
+      author: "Physics Nerd",
       avatar: channel_7,
       uploaded: "2 weeks ago",
       text: "The physics in some of these clips defies all logic. Absolutely crazy."
     },
     {
       id: 305,
-      author: "ConcernedCitizen",
+      author: "Concerned Citizen",
       avatar: channel_11,
       uploaded: "5 days ago",
       text: "People need to be more careful. These could have ended very badly."
     },
     {
       id: 306,
-      author: "EntertainmentHub",
+      author: "Entertainment Hub",
       avatar: channel_4,
       uploaded: "1 month ago",
       text: "The editing on this compilation makes it even more intense. Great work!"
@@ -195,7 +195,7 @@ const comments = {
   5: [
     {
       id: 501,
-      author: "DevGuru",
+      author: "Dev_Guru",
       avatar: channel_7,
       uploaded: "5 days ago",
       text: "This explanation made dynamic programming click for me. Thanks CS Dojo!"
@@ -230,7 +230,7 @@ const comments = {
     },
     {
       id: 506,
-      author: "TechEducator",
+      author: "Tech Educator",
       avatar: channel_6,
       uploaded: "4 days ago",
       text: "The step-by-step breakdown is perfect. Sharing this with my students."
@@ -240,42 +240,42 @@ const comments = {
   6: [
     {
       id: 601,
-      author: "ChallengeFan",
+      author: "Challenge Fan",
       avatar: channel_1,
       uploaded: "1 day ago",
       text: "MrBeast's content keeps getting crazier and more entertaining!"
     },
     {
       id: 602,
-      author: "PhilanthropyFan",
+      author: "Philanthropy Fan",
       avatar: channel_5,
       uploaded: "2 weeks ago",
       text: "The generosity in this video is unmatched. MrBeast is changing lives!"
     },
     {
       id: 603,
-      author: "GameShowLover",
+      author: "GameShow Lover",
       avatar: channel_8,
       uploaded: "3 days ago",
       text: "The tension in this challenge was unreal. I was on the edge of my seat!"
     },
     {
       id: 604,
-      author: "RandomViewer",
+      author: "Random Viewer",
       avatar: channel_12,
       uploaded: "1 week ago",
       text: "How does someone even come up with these concepts? Pure genius."
     },
     {
       id: 605,
-      author: "BudgetWatcher",
+      author: "Budget Watcher",
       avatar: channel_3,
       uploaded: "1 month ago",
       text: "The production budget on this must have been insane. Worth every penny!"
     },
     {
       id: 606,
-      author: "SocialMediaMogul",
+      author: "SocialMedia-Mogul",
       avatar: channel_10,
       uploaded: "5 days ago",
       text: "This video broke the internet when it came out. Still getting views years later!"
@@ -292,7 +292,7 @@ const comments = {
     },
     {
       id: 702,
-      author: "PilotLife",
+      author: "Pilot_Life",
       avatar: channel_9,
       uploaded: "1 week ago",
       text: "As a pilot, I can confirm this is accurate. Interesting flight path restrictions."
@@ -313,7 +313,7 @@ const comments = {
     },
     {
       id: 705,
-      author: "TravelBug",
+      author: "Travel_Bug",
       avatar: channel_11,
       uploaded: "2 weeks ago",
       text: "Makes me want to book a flight and see Tibet from above someday."
@@ -344,7 +344,7 @@ const comments = {
     },
     {
       id: 803,
-      author: "TravelJunkie",
+      author: "Travel_Junkie",
       avatar: channel_8,
       uploaded: "2 weeks ago",
       text: "I've been on this plane! It's massive inside. Great video showing the details."
@@ -396,7 +396,7 @@ const comments = {
     },
     {
       id: 904,
-      author: "MorningWorkout",
+      author: "Morning Workout",
       avatar: channel_9,
       uploaded: "3 days ago",
       text: "Started doing this routine every morning. Already seeing results after 2 weeks!"
@@ -410,7 +410,7 @@ const comments = {
     },
     {
       id: 906,
-      author: "HomeGymHero",
+      author: "HomeGym_Hero",
       avatar: channel_1,
       uploaded: "1 month ago",
       text: "No equipment needed and still gets you dripping sweat. Perfect for home workouts!"
@@ -420,7 +420,7 @@ const comments = {
   10: [
     {
       id: 1001,
-      author: "LogisticsGeek",
+      author: "Logistics_Geek",
       avatar: channel_5,
       uploaded: "4 days ago",
       text: "30,000 meals a day? The logistics behind this are incredible."
@@ -434,7 +434,7 @@ const comments = {
     },
     {
       id: 1003,
-      author: "SupplyChainMgr",
+      author: "SupplyChain Mgr",
       avatar: channel_3,
       uploaded: "2 weeks ago",
       text: "As someone in logistics, this video gives me so much appreciation for cruise operations."
@@ -448,14 +448,14 @@ const comments = {
     },
     {
       id: 1005,
-      author: "EngineeringMinds",
+      author: "Engineering Minds",
       avatar: channel_10,
       uploaded: "1 month ago",
       text: "Business Insider always makes these complex systems easy to understand."
     },
     {
       id: 1006,
-      author: "VacationPlanner",
+      author: "Vacation Planner",
       avatar: channel_6,
       uploaded: "5 days ago",
       text: "After watching this, I'm definitely booking a cruise. The organization is impressive!"
@@ -465,14 +465,14 @@ const comments = {
   11: [
     {
       id: 1101,
-      author: "EngineeringWiz",
+      author: "Engineering Wiz",
       avatar: channel_9,
       uploaded: "2 days ago",
       text: "Dubai really said 'hold my desert' and built this. Incredible engineering!"
     },
     {
       id: 1102,
-      author: "UrbanPlanner",
+      author: "Urban Planner",
       avatar: channel_4,
       uploaded: "1 week ago",
       text: "The infrastructure in Dubai is decades ahead of most cities. Impressive."
@@ -486,14 +486,14 @@ const comments = {
     },
     {
       id: 1104,
-      author: "InfrastructureFan",
+      author: "Infrastructure Fan",
       avatar: channel_7,
       uploaded: "4 days ago",
       text: "Building underwater tunnels is no joke. The engineering here is world-class."
     },
     {
       id: 1105,
-      author: "MiddleEastExplorer",
+      author: "MiddleEast-Explorer",
       avatar: channel_11,
       uploaded: "2 weeks ago",
       text: "Dubai continues to amaze me. Every visit reveals another marvel of engineering."
@@ -524,28 +524,28 @@ const comments = {
     },
     {
       id: 1203,
-      author: "BiologyStudent",
+      author: "Biology Student",
       avatar: channel_6,
       uploaded: "1 week ago",
       text: "The animation quality in TED-Ed videos is always top tier. Love this channel!"
     },
     {
       id: 1204,
-      author: "DailyViewer",
+      author: "Daily_Viewer",
       avatar: channel_10,
       uploaded: "2 weeks ago",
       text: "I watch TED-Ed videos every morning with breakfast. Never fails to educate me."
     },
     {
       id: 1205,
-      author: "MindfulLiving",
+      author: "Mindful Living",
       avatar: channel_12,
       uploaded: "1 month ago",
       text: "Water is life indeed. This video perfectly explains why we shouldn't take it for granted."
     },
     {
       id: 1206,
-      author: "TeacherLife",
+      author: "Teacher Life",
       avatar: channel_5,
       uploaded: "5 days ago",
       text: "I show these kinds of videos to my students. They love the animation and learn so much!"

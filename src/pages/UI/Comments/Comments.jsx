@@ -19,6 +19,7 @@ function Comments({ video }) {
     const newComment = {
       id: Date.now(),
       author: 'You',
+      uploaded: 'Just now',
       avatar: video.channelImage,
       text: trimmedComment,
     };

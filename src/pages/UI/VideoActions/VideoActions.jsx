@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { formatNumber } from '../utils/formatNumber';
 import './VideoActions.css';
 
@@ -12,7 +12,15 @@ function VideoActions({ video }) {
 
   const [likeCount, setLikeCount] = useState(Number(video.likes) || 0);
 
-  const [saved, setSaved] = useState(false);
+  const savedKey = `Video-${video.id}-saved`;
+
+  const [saved, setSaved] = useState(() => {
+    return localStorage.getItem(savedKey) === 'true';
+  });
+
+  useEffect(() => {
+    localStorage.setItem(savedKey, saved);
+  }, [saved, savedKey]);
 
   const [showShared, setShowShared] = useState(false);
 
