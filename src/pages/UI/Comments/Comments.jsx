@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import commentsData from '../../../data/comments';
 import './Comments.css';
 
 function Comments({ video }) {
 
   const [commentText, setCommentText] = useState('');
 
-  const [comments, setComments] = useState(video.comments || []);
+  const [comments, setComments] = useState(commentsData[video.id] || []);
 
   const handleComment = () => {
 
