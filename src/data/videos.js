@@ -195,6 +195,7 @@ const videos = [
     verified: true,
     category: categories[6],
     likes: 610,
+    description: "Water is life—literally. 💧 In this eye-opening TED-Ed video, Mia Nacamulli explains what would happen to your body if you stopped drinking water, and the results are both fascinating and terrifying.\n\n🧠 You'll discover:\n• How dehydration affects your brain and organs within hours\n• The science behind water's role in every bodily function\n• Real stories of what happens during extreme dehydration\n• Simple tips to stay hydrated and healthy\n\nThis isn't just about drinking more water—it's about understanding the incredible biology that keeps us alive. Perfect for students, health enthusiasts, and anyone who wants to appreciate the simple things in life. 🌱\n\n📚 Curious for more? Check out the TED-Ed full lesson!\n\n🔔 Subscribe for daily educational content!\n\n#TEDEd #Water #Health #Science #Biology #Hydration #Facts #Education #HumanBody #Learning",
   }
 ];
 

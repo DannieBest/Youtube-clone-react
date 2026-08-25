@@ -184,6 +184,7 @@
   line-height: 1.5;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  white-space: pre-line;
 }
 
 .video-info__description:hover {
@@ -235,6 +236,7 @@
 .video-info__expand-btn:hover {
   text-decoration: underline;
 }
+
 /* ==========================================
    DOWNLOAD ANIMATION
 ========================================== */
