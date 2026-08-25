@@ -7,7 +7,16 @@ import whatsappIcon from '../../../../src/assets/SVG/whatsapp_svg.jpg';
 import xIcon from '../../../../src/assets/SVG/x_svg.png';
 
 function VideoActions({ video }) {
-  const [liked, setLiked] = useState(false);
+  const likedKey = `Liked-${video.id}-saved`; 
+
+  const [liked, setLiked] = useState(() => {
+    return localStorage.getItem(likedKey) === 'true';
+  });
+
+  useEffect(() => {
+    localStorage.setItem(likedKey, liked)
+  }, [liked, likedKey]);
+
   const [disliked, setDisliked] = useState(false);
 
   const [likeCount, setLikeCount] = useState(Number(video.likes) || 0);
@@ -178,7 +187,11 @@ function VideoActions({ video }) {
         disabled={isDownloading}
         onClick={handleDownloaded}
       >
-        <i className="material-icons">
+        <i
+          className={`material-icons ${
+            isDownloading ? 'download-icon--loading' : ''
+          }`}
+        >
           {isDownloaded ? 'check' : 'download'}
         </i>
 

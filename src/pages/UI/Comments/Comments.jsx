@@ -105,12 +105,11 @@ function Comments({ video }) {
           className="comments__item"
           key={comment.id}
         >
-          <div>
-            <img
-              src={comment.avatar}
-              alt="comments profile"
-            />
-          </div>
+          
+          <img
+            src={comment.avatar}
+            alt="comments profile"
+          />
           
           <div>
             <div className="comments__meta">

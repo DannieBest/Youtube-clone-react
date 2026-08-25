@@ -122,36 +122,60 @@
    DOWNLOAD ANIMATION
 ========================================== */
 
+/* ==========================================
+   DOWNLOAD BUTTON
+========================================== */
+
+.video-actions__button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
 .video-actions__button--downloaded {
-  animation: downloadSuccess 0.4s ease;
+  color: #065fd4;
 }
 
-.video-actions__button--downloaded .material-icons {
-  animation: downloadIcon 0.4s ease;
+.video-actions__button--downloaded i {
+  animation: downloadComplete 0.4s ease;
 }
 
-@keyframes downloadSuccess {
+@keyframes downloadComplete {
   0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.08);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes downloadIcon {
-  0% {
-    transform: translateY(-5px);
+    transform: scale(0.7);
     opacity: 0;
   }
 
-  100% {
-    transform: translateY(0);
+  60% {
+    transform: scale(1.2);
     opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ==========================================
+   DOWNLOAD ICON
+========================================== */
+
+.download-icon--loading {
+  animation: downloadPulse 1s ease-in-out infinite;
+}
+
+@keyframes downloadPulse {
+  0% {
+    transform: translateY(-3px);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: translateY(3px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-3px);
+    opacity: 0.6;
   }
 }

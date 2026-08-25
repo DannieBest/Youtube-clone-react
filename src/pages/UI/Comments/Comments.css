@@ -7,13 +7,6 @@
   
 }
 
-.comments__meta {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-}
-
 .comments__header {
   display: flex;
   
@@ -57,7 +50,7 @@
   gap: 14px;
   width: 100%;
   padding: 10px 0;
-  border-bottom: 1px solid var(--border-color, #e5e5e5);
+  border-bottom: 1px solid #f4f3f3;
   transition: background-color 0.2s ease;
 }
 
@@ -103,22 +96,24 @@
    COMMENT AUTHOR
 ========================================== */
 
-.comments__item strong {
-  display: block;
-
+.comments__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 6px;
+}
 
+.comments__meta strong {
+  display: inline;
+  margin: 0;
   color: var(--text-color);
-
   font-size: 14px;
   font-weight: 600;
 }
 
-.comments__item span {
-  margin-right: 8px;
-
+.comments__meta span {
+  margin: 0;
   color: #606060;
-
   font-size: 13px;
 }
 
