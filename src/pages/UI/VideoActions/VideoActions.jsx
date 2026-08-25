@@ -1,3 +1,9 @@
+/**
+ * VideoActions Component
+ * 
+ * Provides interactive action controls for a video: Like/Dislike counters, Share modal,
+ * simulated video downloading with progress states, and Save/Bookmark toggling.
+ */
 import { useState, useEffect } from 'react';
 import { formatNumber } from '../utils/formatNumber';
 import './VideoActions.css';
@@ -7,6 +13,7 @@ import whatsappIcon from '../../../../src/assets/SVG/whatsapp_svg.jpg';
 import xIcon from '../../../../src/assets/SVG/x_svg.png';
 
 function VideoActions({ video }) {
+  // Persistent like & save keys for localStorage
   const likedKey = `Video-${video.id}-liked`; 
 
   const [liked, setLiked] = useState(() => {

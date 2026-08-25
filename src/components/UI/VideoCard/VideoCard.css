@@ -1,39 +1,17 @@
 /* ==========================================
-   VIDEO GRID
-========================================== */
-
-.video-grid {
-  display: grid;
-
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(320px, 1fr)
-  );
-
-  gap: 32px 16px;
-
-  padding: 16px 24px;
-}
-
-
-/* ==========================================
    VIDEO CARD
 ========================================== */
 
 .video-card {
   display: flex;
   flex-direction: column;
-
   width: 100%;
-
   cursor: pointer;
-
   transition:
-    transform 0.25s ease,
-    background-color 0.25s ease,
-    box-shadow 0.25s ease;
+    transform var(--transition-smooth),
+    background-color var(--transition-smooth),
+    box-shadow var(--transition-smooth);
 }
-
 
 /* ==========================================
    THUMBNAIL
@@ -41,179 +19,122 @@
 
 .video-card__thumbnail {
   position: relative;
-
   overflow: hidden;
-
   aspect-ratio: 16 / 9;
-
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
 }
 
 .video-card__thumbnail img {
   width: 100%;
   height: 100%;
-
   display: block;
-
   object-fit: cover;
-
-  border-radius: 12px;
-
-  transition: transform 0.25s ease;
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-smooth);
 }
 
 .video-card:hover .video-card__thumbnail img {
   transform: scale(1.04);
 }
 
-
 /* ==========================================
-   VIDEO DURATION
+   VIDEO DURATION BADGE
 ========================================== */
 
 .video-card__duration {
   position: absolute;
-
   right: 8px;
   bottom: 8px;
-
   padding: 3px 5px;
 
-  background: rgba(0, 0, 0, 0.85);
-  color: #fff;
-
-  border-radius: 4px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border-radius: var(--radius-sm);
 
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.2px;
 }
 
-
 /* ==========================================
-   VIDEO DETAILS
+   VIDEO DETAILS & CHANNEL AVATAR
 ========================================== */
 
 .video-card__details {
   display: flex;
   align-items: flex-start;
-
   gap: 12px;
-
   margin-top: 12px;
 }
-
-
-/* ==========================================
-   CHANNEL IMAGE
-========================================== */
 
 .video-card__channel img {
   width: 36px;
   height: 36px;
-
   flex-shrink: 0;
-
-  border-radius: 50%;
-
+  border-radius: var(--radius-circle);
   object-fit: cover;
 }
 
-
 /* ==========================================
-   VIDEO INFORMATION
+   VIDEO INFORMATION & METADATA
 ========================================== */
 
 .video-card__info {
   flex: 1;
   min-width: 0;
-
   display: flex;
   flex-direction: column;
 }
 
-
-/* ==========================================
-   VIDEO TITLE
-========================================== */
-
 .video-card__title {
   display: -webkit-box;
-
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   line-clamp: 2;
-
   overflow: hidden;
-
   margin-bottom: 6px;
 
-  color: #0f0f0f;
-
+  color: var(--text-color);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.4;
 }
 
-
-/* ==========================================
-   CHANNEL NAME
-========================================== */
-
 .video-card__channel-name {
   display: flex;
   align-items: center;
-
   font-size: 14px;
-
-  color: #8b8989;
+  color: var(--text-secondary);
 }
-
-
-/* ==========================================
-   VERIFIED ICON
-========================================== */
 
 .video-card__verified {
   margin-left: 4px;
-
-  color: #1e1e1f;
-
+  color: var(--text-color);
   font-size: 16px;
 }
 
-
-/* ==========================================
-   VIDEO STATS
-========================================== */
-
 .video-card__stats {
   margin-top: 4px;
-
   font-size: 14px;
-
-  color: #464444;
+  color: var(--text-secondary);
 }
 
-
 /* ==========================================
-   VIDEO MENU
+   VIDEO CONTEXT MENU BUTTON
 ========================================== */
 
 .video-card__menu {
   display: flex;
   align-items: center;
   justify-content: center;
-
   flex-shrink: 0;
-
   padding: 4px;
 
   background: none;
   border: none;
-  border-radius: 50%;
-
+  border-radius: var(--radius-circle);
   cursor: pointer;
+  transition: background-color var(--transition-fast);
 }
 
 .video-card__menu:hover {

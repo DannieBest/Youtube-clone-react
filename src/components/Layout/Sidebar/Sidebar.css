@@ -1,3 +1,7 @@
+/* ==========================================
+   SIDEBAR CONTAINER & NAVIGATION
+========================================== */
+
 .sidebar {
   display: block;
   height: calc(100vh - var(--header-height));
@@ -5,10 +9,10 @@
   position: fixed;
   top: var(--header-height);
   left: 0;
-  z-index: 100;
+  z-index: var(--z-sidebar);
   overflow-y: auto;
   background: var(--background);
-  transition: transform 0.2s ease, width 0.2s ease;
+  transition: transform var(--transition-normal), width var(--transition-normal);
 }
 
 .sidebar.sidebar--closed {
@@ -25,6 +29,10 @@
   }
 }
 
+/* ==========================================
+   CUSTOM SCROLLBAR
+========================================== */
+
 .sidebar::-webkit-scrollbar {
   display: none;
 }
@@ -40,8 +48,12 @@
 
 .sidebar::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
 }
+
+/* ==========================================
+   SIDEBAR LINKS & SECTIONS
+========================================== */
 
 .sidebar__navigation {
   display: flex;
@@ -60,15 +72,14 @@
   justify-content: flex-start;
   color: var(--text-color);
   margin: 0px 14px 0px 10px;
-  border-radius: 15px;
+  border-radius: var(--radius-lg);
   gap: 15px;
   width: auto;
   padding: 10px 16px;
-  color: inherit;
 
   transition:
-    background-color .2s ease,
-    color .2s ease;
+    background-color var(--transition-fast),
+    color var(--transition-fast);
 }
 
 .sidebar__link i {
@@ -88,12 +99,12 @@
   font-weight: 400;
 }
 
-.sidebar__avatar{
-  width:24px;
-  height:24px;
-  border-radius:50%;
-  object-fit:cover;
-  flex-shrink:0;
+.sidebar__avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-circle);
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .sidebar__link:hover {
@@ -102,7 +113,8 @@
 
 .sidebar__divider {
   height: 1px;
-  background: rgb(191, 189, 189);
+  border: none;
+  background: var(--border-color);
   margin: 12px 0;
   flex-shrink: 0;
 }

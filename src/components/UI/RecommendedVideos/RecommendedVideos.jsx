@@ -1,10 +1,16 @@
+/**
+ * RecommendedVideos Component
+ * 
+ * Displays the side recommendation column on the Watch page. Filtered by active category
+ * chip if selected and excludes the current active video ID from recommendations.
+ */
 import { Link } from 'react-router-dom';
 import videos from '../../../data/videos';
 import CategoryBar from '../CategoryBar/CategoryBar';
 import './RecommendedVideos.css';
 
 function RecommendedVideos({ currentVideoId, selectedCategory, setSelectedCategory }) {
-
+  // Exclude current playing video and filter by selected category
   const recommendedVideos = videos.filter((video) => {
     const isNotCurrent = video.id !== currentVideoId;
     const matchesCategory =

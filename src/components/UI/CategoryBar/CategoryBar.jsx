@@ -1,3 +1,9 @@
+/**
+ * CategoryBar Component
+ * 
+ * Renders a horizontally scrollable bar of category chips with navigation arrows.
+ * Handles auto-scrolling to active category and update scroll button visibility on resize/scroll.
+ */
 import './CategoryBar.css';
 import categories from '../../../data/categories';
 import { useEffect, useRef, useState } from 'react';
@@ -7,22 +13,20 @@ function CategoryBar({ selectedCategory, setSelectedCategory }) {
   const containerRef = useRef(null);
   const categoryRefs = useRef({});
 
+  // Arrow button display state
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
-
+  /**
+   * Recalculates scroll offset to toggle left/right arrow visibility
+   */
   const updateScrollButtons = () => {
     const container = containerRef.current;
-
     if (!container) return;
 
     const { scrollLeft, scrollWidth, clientWidth } = container;
-
     setCanScrollLeft(scrollLeft > 0);
-
-    setCanScrollRight(
-      scrollLeft + clientWidth < scrollWidth - 1
-    );
+    setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1);
   };
 
 

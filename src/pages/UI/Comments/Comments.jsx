@@ -1,11 +1,18 @@
+/**
+ * Comments Component
+ * 
+ * Manages video comment list state and interactive comment posting form.
+ * Displays total comment count, sort controls, user comment input, and comment thread.
+ */
 import { useState } from 'react';
 import commentsData from '../../../data/comments';
 import './Comments.css';
 
 function Comments({ video }) {
-
+  // Input box state for new comment submission
   const [commentText, setCommentText] = useState('');
 
+  // Local state initialized with comment dataset for active video
   const [comments, setComments] = useState(commentsData[video.id] || []);
 
   const handleComment = () => {

@@ -1,8 +1,15 @@
+/**
+ * VideoInfo Component
+ * 
+ * Manages video metadata display including title, channel avatar, subscriber count,
+ * subscription toggle state (persisted in localStorage), video action controls, and expandable description card.
+ */
 import { useState, useEffect } from 'react';
 import VideoActions from '../VideoActions/VideoActions';
 import './VideoInfo.css';
 
 function VideoInfo({ video }) {
+  // State for description box expansion and channel subscription
   const [isExpanded, setIsExpanded] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
 

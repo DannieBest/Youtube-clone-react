@@ -1,3 +1,9 @@
+/**
+ * WatchPage Component
+ * 
+ * Displays the video player view for a selected video ID.
+ * Renders video player player, metadata info, user comments, and recommended side column.
+ */
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -12,10 +18,12 @@ function WatchPage() {
   const { videoId } = useParams();
   const [selectedCategory, setSelectedCategory] = useState('All');
 
+  // Find target video object from video dataset
   const video = videos.find(
     (video) => video.id === Number(videoId)
   );
 
+  // Render fallback view if video ID does not exist
   if (!video) {
     return (
       <main className="watch-page">

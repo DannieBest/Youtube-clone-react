@@ -1,12 +1,77 @@
 /* ==========================================
-   1. IMPORTS
+   1. GLOBAL IMPORTS & FONTS
 ========================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-/* Global Styles */
+/* ==========================================
+   2. GLOBAL DESIGN SYSTEM TOKENS (:root)
+========================================== */
+
+:root {
+  /* Layout Dimensions */
+  --header-height: 56px;
+  --sidebar-width: 240px;
+
+  /* Primary Brand & Theme Colors */
+  --background: #ffffff;
+  --text-color: #0f0f0f;
+  --text-secondary: #606060;
+  --text-muted: #8b8989;
+  --accent: #065fd4;
+  --accent-hover: #1c62b9;
+
+  /* Surface & Container Colors */
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --button-secondary-bg: #f2f2f2;
+  --button-active-bg: #bababa;
+  --badge-bg: rgba(0, 0, 0, 0.85);
+  --badge-text: #ffffff;
+
+  /* Borders & Dividers */
+  --border-color: #e5e5e5;
+  --border-light: #f4f3f3;
+  --input-border: #ccc;
+  --divider-color: #bfbddd;
+
+  /* States & Interactivity */
+  --hover: #f2f2f2;
+  --hover-dark: #e5e5e5;
+  --hover-bg: rgba(0, 0, 0, 0.05);
+
+  /* Scrollbars */
+  --scrollbar-thumb: #888888;
+
+  /* Border Radii */
+  --radius-xs: 3px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+  --radius-pill: 9999px;
+  --radius-circle: 50%;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Transitions & Animation Timing */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+  --transition-smooth: 0.25s ease;
+
+  /* Z-Indices */
+  --z-dropdown: 10;
+  --z-sticky: 90;
+  --z-sidebar: 100;
+  --z-header: 1000;
+}
+
+/* ==========================================
+   3. GLOBAL CSS RESET & BASE STYLES
+========================================== */
 
 * {
   margin: 0;
@@ -15,33 +80,11 @@
 }
 
 body {
-  font-family:'Roboto',sans-serif;
-}
-
-:root{
-
-  --header-height:56px;
-
-  --sidebar-width:240px;
-
-  --border-color:#e5e5e5;
-
-  --background:#fff;
-
-  --hover:#f2f2f2;
-
-  --text-color:#0f0f0f;
-
-  --accent:#1976d2;
-
-  --accent-hover:#1c62b9;
-
-  --input-border:#ccc;
-
-  --hover-bg:rgba(0, 0, 0, 0.05);
-
-  --scrollbar-thumb:#888;
-
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -51,6 +94,7 @@ a {
 
 button {
   font: inherit;
+  cursor: pointer;
 }
 
 img {

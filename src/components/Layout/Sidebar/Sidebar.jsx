@@ -1,3 +1,9 @@
+/**
+ * Sidebar Component
+ * 
+ * Displays the primary navigation sidebar containing quick links (Home, Shorts),
+ * subscribed channels list, and user library links. Supports collapsible toggle state.
+ */
 import './Sidebar.css';
 import channel_1 from '../../../assets/channel-images/channel-1.jpeg';
 import channel_2 from '../../../assets/channel-images/channel-2.jpeg';
@@ -6,19 +12,17 @@ import channel_4 from '../../../assets/channel-images/channel-4.jpeg';
 import channel_5 from '../../../assets/channel-images/channel-5.jpeg';
 import channel_6 from '../../../assets/channel-images/channel-6.jpeg';
 
-
 function Sidebar({ isOpen = true }) {
   return (
     <aside className={`sidebar ${!isOpen ? 'sidebar--closed' : ''}`}>
-
       <nav className="sidebar__navigation">
-
+        {/* Main Navigation Links */}
         <section className="sidebar__section">
           <a href="#home" className="sidebar__link active">
             <i className="material-icons">home</i>
             <span>Home</span>
           </a>
-          <a href="#" className="sidebar__link active">
+          <a href="#" className="sidebar__link">
             <i className="material-icons">local_fire_department</i>
             <span>Shorts</span>
           </a>

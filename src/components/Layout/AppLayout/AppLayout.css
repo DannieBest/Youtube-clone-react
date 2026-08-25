@@ -1,5 +1,10 @@
+/* ==========================================
+   APP LAYOUT CONTAINER
+========================================== */
+
 .app {
   min-height: 100vh;
+  background-color: var(--background);
 }
 
 .app-layout {

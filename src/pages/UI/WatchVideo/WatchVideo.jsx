@@ -1,6 +1,11 @@
+/**
+ * WatchVideo Component
+ * 
+ * Renders the main 16:9 video player area and duration badge for the Watch page.
+ */
 import './WatchVideo.css';
 
-function WatchVideo({video}) {
+function WatchVideo({ video }) {
   return (
     <section className="watch-video">
       <div className="watch-video__player">

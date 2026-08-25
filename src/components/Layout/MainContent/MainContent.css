@@ -1,3 +1,7 @@
+/* ==========================================
+   MAIN CONTENT AREA
+========================================== */
+
 .main-content {
   flex: 1;
   margin-top: var(--header-height);
@@ -6,12 +10,16 @@
   min-height: calc(100vh - var(--header-height));
 
   background: var(--background);
-  transition: margin-left 0.2s ease;
+  transition: margin-left var(--transition-normal);
 }
 
 .app-layout.sidebar-closed .main-content {
   margin-left: 0;
 }
+
+/* ==========================================
+   RESPONSIVE BREAKPOINTS
+========================================== */
 
 @media (max-width: 1200px) {
   .main-content {
