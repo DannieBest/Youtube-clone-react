@@ -1,12 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import VideoActions from '../VideoActions/VideoActions';
 import './VideoInfo.css';
 
 function VideoInfo({ video }) {
+
+  const subscribedKey = `Channel-${video.channel}-subscribed`;
+
   const [subscribed, setSubscribed] = useState(false);
 
+  useEffect(() => {
+    const savedSubscription =
+      localStorage.getItem(subscribedKey) === 'true';
+
+    setSubscribed(savedSubscription);
+  }, [subscribedKey]);
+
+  useEffect(() => {
+    if (subscribed) {
+      localStorage.setItem(subscribedKey, 'true');
+    } else {
+      localStorage.removeItem(subscribedKey);
+    }
+  }, [subscribed, subscribedKey]);
+
   const handleSubscribe = () => {
-    setSubscribed((prevSubscribed) => !prevSubscribed);
+    setSubscribed(previousSubscribed => !previousSubscribed);
   };
 
   return (
@@ -68,6 +86,8 @@ function VideoInfo({ video }) {
         <p>
           This is the video description. We will connect
           this section to our video data later.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ut dolorem deleniti est, at maxime. Voluptatem, accusamus laudantium, veritatis nesciunt accusantium omnis cumque deserunt obcaecati dignissimos praesentium placeat ab aspernatur.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum modi consectetur esse ea libero totam soluta officiis magni necessitatibus, sed quaerat voluptate delectus distinctio, voluptatibus accusamus maxime quos doloribus dolorem.
         </p>
 
       </div>
