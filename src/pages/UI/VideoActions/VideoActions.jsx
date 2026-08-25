@@ -18,6 +18,9 @@ function VideoActions({ video }) {
 
   const [copied, setCopied] = useState(false);
 
+  const [isDownloaded, setIsDownloaded] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
+
   const handleCopyLink = async () => {
     const videoUrl = `${window.location.origin}/watch/${video.id}`;
 
@@ -71,6 +74,21 @@ function VideoActions({ video }) {
   const handleShared = () => {
     setShowShared(prevShared => !prevShared);
   }
+
+  const handleDownloaded = () => {
+    if (isDownloading || isDownloaded) return;
+
+    setIsDownloading(true);
+
+    setTimeout(() => {
+      setIsDownloading(false);
+      setIsDownloaded(true);
+
+      setTimeout(() => {
+        setIsDownloaded(false);
+      }, 2000);
+    }, 3000);
+  };
 
   return (
     <div className="video-actions">
@@ -144,10 +162,21 @@ function VideoActions({ video }) {
       )}
 
       {/* Download */}
-      <button className="video-actions__button">
-        <i className="material-icons">download</i>
+      <button
+        type="button" 
+        className={`video-actions__button ${
+          isDownloaded ? 'video-actions__button--downloaded' : ''
+        }`}
+        disabled={isDownloading}
+        onClick={handleDownloaded}
+      >
+        <i className="material-icons">
+          {isDownloaded ? 'check' : 'download'}
+        </i>
 
-        <span>Download</span>
+        <span>
+          {isDownloading ? 'Downloading...' : isDownloaded ? 'Downloaded' : 'Download'}
+        </span>
       </button>
 
       {/* Save */}
