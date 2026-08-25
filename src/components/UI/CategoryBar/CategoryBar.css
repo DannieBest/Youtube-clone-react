@@ -13,6 +13,8 @@
   width: 100%;
 
   background: var(--background);
+
+  margin-bottom: 4px;
 }
 
 .category-bar__wrapper {

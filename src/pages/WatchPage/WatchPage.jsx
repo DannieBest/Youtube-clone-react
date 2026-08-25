@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
-import CategoryBar from '../../components/UI/CategoryBar/CategoryBar';
 import videos from '../../data/videos';
 import RecommendedVideos from '../../components/UI/RecommendedVideos/RecommendedVideos';
 import WatchVideo from '../UI/WatchVideo/WatchVideo';
@@ -27,16 +26,8 @@ function WatchPage() {
 
   return (
     <main className="watch-page">
-      {/* Category Navigation */}
-      <CategoryBar
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-      />
-
       <div className="watch-page__content">
-
         <div className="watch-page__main">
-
           {/* Video Player */}
           <WatchVideo video={video} />
 
@@ -45,14 +36,15 @@ function WatchPage() {
 
           {/* Comments */}
           <Comments video={video} />
-
         </div>
 
-        {/* Recommended Videos */}
-        <RecommendedVideos currentVideoId={video.id} />
-
+        {/* Recommended Videos with Category Bar */}
+        <RecommendedVideos
+          currentVideoId={video.id}
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
       </div>
-
     </main>
   );
 }

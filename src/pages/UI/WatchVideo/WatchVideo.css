@@ -42,3 +42,9 @@
   font-weight: 600;
 }
 
+@media (max-width: 480px) {
+  .watch-video__player {
+    border-radius: 0;
+  }
+}
+

@@ -28,10 +28,10 @@
   display: flex;
   align-items: center;
 
-  flex: 1;
-  flex-wrap: wrap;
+  flex-shrink: 1;
+  min-width: 0;
 
-  gap: 16px;
+  gap: 12px;
 
   justify-content: space-between;
 }
@@ -121,11 +121,58 @@
   font-weight: 600;
 }
 
+@media (max-width: 650px) {
+  .video-info__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .video-info__channel-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .video-info__channel-right {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-info__title {
+    font-size: 16px;
+  }
+
+  .video-info__channel img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .video-info__channel-info h3 {
+    font-size: 13px;
+  }
+
+  .video-info__channel-info p {
+    font-size: 11px;
+    margin-top: 2px;
+  }
+
+  .video-info__subscribe {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  .video-info__stats {
+    font-size: 12px;
+  }
+}
+
 /* ==========================================
    ACTION BUTTONS
 ========================================== */
 
-.video-info__actions {
+.video-info__channel-right {
   display: flex;
   align-items: center;
 
@@ -134,7 +181,7 @@
   gap: 8px;
 }
 
-.video-info__actions button {
+.video-info__channel-right button {
   display: flex;
   align-items: center;
 
@@ -150,11 +197,11 @@
   cursor: pointer;
 }
 
-.video-info__actions button:hover {
+.video-info__channel-right button:hover {
   background: #e5e5e5;
 }
 
-.video-info__actions i {
+.video-info__channel-right i {
   font-size: 20px;
 }
 

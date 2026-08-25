@@ -2,8 +2,42 @@
   display: flex;
   align-items: center;
   position: relative;
-
   gap: 8px;
+  max-width: 100%;
+}
+
+@media (max-width: 650px) {
+  .video-actions {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .video-actions::-webkit-scrollbar {
+    display: none;
+  }
+
+  .video-actions button {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .video-actions__like-group {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-actions button {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+
+  .video-actions i {
+    font-size: 18px;
+  }
 }
 
 .video-actions__like-group .action-active {
@@ -177,5 +211,13 @@
   100% {
     transform: translateY(-3px);
     opacity: 0.6;
+  }
+}
+
+@media (max-width: 480px) {
+  /* ... existing mobile rules ... */
+
+  .video-actions__more {
+    display: none !important;
   }
 }

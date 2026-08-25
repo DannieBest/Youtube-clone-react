@@ -2,9 +2,29 @@
   flex: 1;
   margin-top: var(--header-height);
   margin-left: var(--sidebar-width);
-  container-type: inline-size;
-
+  min-width: 0;
   min-height: calc(100vh - var(--header-height));
 
   background: var(--background);
+  transition: margin-left 0.2s ease;
+}
+
+.app-layout.sidebar-closed .main-content {
+  margin-left: 0;
+}
+
+@media (max-width: 1200px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .app-layout.sidebar-closed .main-content {
+    margin-left: var(--sidebar-width);
+  }
+}
+
+@media (max-width: 768px) {
+  .app-layout.sidebar-closed .main-content {
+    margin-left: 0;
+  }
 }

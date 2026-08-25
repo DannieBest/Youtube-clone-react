@@ -1,19 +1,30 @@
 import { Link } from 'react-router-dom';
 import videos from '../../../data/videos';
+import CategoryBar from '../CategoryBar/CategoryBar';
 import './RecommendedVideos.css';
 
-function RecommendedVideos({ currentVideoId }) {
+function RecommendedVideos({ currentVideoId, selectedCategory, setSelectedCategory }) {
 
-  const recommendedVideos = videos.filter(
-    (video) => video.id !== currentVideoId
-  );
+  const recommendedVideos = videos.filter((video) => {
+    const isNotCurrent = video.id !== currentVideoId;
+    const matchesCategory =
+      !selectedCategory ||
+      selectedCategory === 'All' ||
+      video.category === selectedCategory;
+
+    return isNotCurrent && matchesCategory;
+  });
 
   return (
     <aside className="recommended-videos">
-
-      <h2 className="recommended-videos__heading">
-        Recommended
-      </h2>
+      {setSelectedCategory && (
+        <div className="recommended-videos__categories">
+          <CategoryBar
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
+        </div>
+      )}
 
       <div className="recommended-videos__list">
 

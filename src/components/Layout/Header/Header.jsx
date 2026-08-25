@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 import profile_pic from '../../../assets/channel-images/profile.jpeg';
 
-function Header({searchQuery, setSearchQuery}) {
+function Header({searchQuery, setSearchQuery, onToggleSidebar}) {
   return ( 
     <header className='header'>
       <div className="header__left">
-        <button className="sidebar__toggle" aria-label='toggle sidebar'>
+        <button className="sidebar__toggle" aria-label='toggle sidebar' onClick={onToggleSidebar}>
           <i className="material-icons">menu</i>
         </button>
         <Link to="/" className="logo">

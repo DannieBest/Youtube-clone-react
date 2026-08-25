@@ -7,9 +7,9 @@ import channel_5 from '../../../assets/channel-images/channel-5.jpeg';
 import channel_6 from '../../../assets/channel-images/channel-6.jpeg';
 
 
-function Sidebar () {
+function Sidebar({ isOpen = true }) {
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${!isOpen ? 'sidebar--closed' : ''}`}>
 
       <nav className="sidebar__navigation">
 
