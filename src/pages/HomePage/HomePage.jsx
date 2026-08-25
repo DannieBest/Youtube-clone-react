@@ -1,12 +1,13 @@
-import Sidebar from '../../components/Layout/Sidebar/Sidebar';
+import { useOutletContext } from 'react-router-dom';
+
 import MainContent from '../../components/Layout/MainContent/MainContent';
 
 function HomePage() {
+
+  const { searchQuery } = useOutletContext();
+
   return (
-    <>
-      <Sidebar />
-      <MainContent />
-    </>
+    <MainContent searchQuery={searchQuery} />
   );
 }
 

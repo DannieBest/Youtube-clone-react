@@ -19,7 +19,7 @@
 
 .watch-page__comments {
   display: flex;
-
+  align-items: flex-start;
   gap: 12px;
 }
 
@@ -41,4 +41,92 @@
 
   font-size: 14px;
   line-height: 1.5;
+}
+
+/* ==========================================
+   COMMENT INPUT
+========================================== */
+
+.comments__input {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.comments__input img {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comments__input-container {
+  flex: 1;
+}
+
+.comments__input-container input {
+  width: 100%;
+
+  padding: 10px 0;
+
+  border: none;
+  border-bottom: 1px solid #ccc;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.comments__input-container input:focus {
+  border-bottom-color: #0f0f0f;
+}
+
+
+/* ==========================================
+   COMMENT ACTIONS
+========================================== */
+
+.comments__actions {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  margin-top: 10px;
+}
+
+.comments__actions button {
+  padding: 8px 16px;
+
+  border: none;
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+}
+
+.comments__actions button:first-child {
+  background: transparent;
+}
+
+.comments__actions button:first-child:hover {
+  background: #f2f2f2;
+}
+
+.comments__actions button:last-child {
+  background: #1a1b1b;
+  color: white;
+}
+
+.comments__actions button:last-child:hover {
+  background: #464747;
+}
+
+.comments__list {
+  display: flex;
+  flex-direction: column; 
+  gap: 16px;             
+  padding: 10px 0;
 }

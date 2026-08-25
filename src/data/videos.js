@@ -40,6 +40,14 @@ const videos = [
     verified: true,
     category: categories[8],
     likes: 245,
+    comments: [
+      {
+        id: 1,
+        author: "Alex",
+        avatar: channel_1,
+        text: "This interview really changed how I see AI development! Google is pushing boundaries.",
+      }
+    ]
   },
   {
     id: 2,
@@ -53,6 +61,14 @@ const videos = [
     verified: true,
     category: categories[3],
     likes: 1200000,
+    comments: [
+      {
+        id: 2,
+        author: "Jordan",
+        avatar: channel_2,
+        text: "I failed so hard at this challenge 😂 Markiplier's reactions are unmatched!",
+      }
+    ]
   },
   {
     id: 3,
@@ -66,6 +82,14 @@ const videos = [
     verified: true,
     category: categories[3],
     likes: 89,
+    comments: [
+      {
+        id: 3,
+        author: "Sam",
+        avatar: channel_3,
+        text: "These clips are insane! How did people survive these moments?",
+      }
+    ]
   },
   {
     id: 4,
@@ -79,6 +103,14 @@ const videos = [
     verified: true,
     category: categories[11],
     likes: 1500000,
+    comments: [
+      {
+        id: 4,
+        author: "Taylor",
+        avatar: channel_4,
+        text: "Finally a math problem explained simply. Veritasium never disappoints!",
+      }
+    ]
   },
   {
     id: 5,
@@ -92,6 +124,14 @@ const videos = [
     verified: true,
     category: categories[12],
     likes: 320,
+    comments: [
+      {
+        id: 5,
+        author: "Morgan",
+        avatar: channel_5,
+        text: "This explanation made dynamic programming click for me. Thanks CS Dojo!",
+      }
+    ]
   },
   {
     id: 6,
@@ -105,6 +145,14 @@ const videos = [
     verified: true,
     category: categories[5],
     likes: 3200,
+    comments: [
+      {
+        id: 6,
+        author: "Casey",
+        avatar: channel_6,
+        text: "MrBeast's content keeps getting crazier and more entertaining!",
+      }
+    ]
   },
   {
     id: 7,
@@ -118,6 +166,14 @@ const videos = [
     verified: true,
     category: categories[15],
     likes: 420000,
+    comments: [
+      {
+        id: 7,
+        author: "Riley",
+        avatar: channel_7,
+        text: "Never knew this fact. The geography explanation was fascinating!",
+      }
+    ]
   },
   {
     id: 8,
@@ -131,6 +187,14 @@ const videos = [
     verified: true,
     category: categories[5],
     likes: 18,
+    comments: [
+      {
+        id: 8,
+        author: "Quinn",
+        avatar: channel_8,
+        text: "The scale of this plane is absolutely mind-blowing!",
+      }
+    ]
   },
 
   {
@@ -145,6 +209,14 @@ const videos = [
     verified: true,
     category: categories[3],
     likes: 1800000,
+    comments: [
+      {
+        id: 9,
+        author: "Avery",
+        avatar: channel_9,
+        text: "ThenX always has the most intense workout content. Motivated!",
+      }
+    ]
   },
   {
     id: 10,
@@ -158,6 +230,14 @@ const videos = [
     verified: true,
     category: categories[4],
     likes: 750,
+    comments: [
+      {
+        id: 10,
+        author: "Jamie",
+        avatar: channel_10,
+        text: "30,000 meals a day? The logistics behind this are incredible.",
+      }
+    ]
   },
   {
     id: 11,
@@ -171,6 +251,14 @@ const videos = [
     verified: true,
     category: categories[15],
     likes: 165,
+    comments: [
+      {
+        id: 11,
+        author: "Drew",
+        avatar: channel_11,
+        text: "Dubai really said 'hold my desert' and built this. Incredible engineering!",
+      }
+    ]
   },
   {
     id: 12,
@@ -184,6 +272,14 @@ const videos = [
     verified: true,
     category: categories[6],
     likes: 610,
+    comments: [
+      {
+        id: 12,
+        author: "Skyler",
+        avatar: channel_12,
+        text: "TED-Ed always has the most thought-provoking content. Worth watching!",
+      }
+    ]
   }
 ];
 

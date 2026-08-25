@@ -44,7 +44,7 @@ function WatchPage() {
           <VideoInfo key={video.id} video={video} />
 
           {/* Comments */}
-          <Comments video={video} />
+          <Comments key={video.id} video={video} />
 
         </div>
 

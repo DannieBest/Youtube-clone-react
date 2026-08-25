@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 import profile_pic from '../../../assets/channel-images/profile.jpeg';
 
-function Header() {
+function Header({searchQuery, setSearchQuery}) {
   return ( 
     <header className='header'>
       <div className="header__left">
@@ -21,11 +21,18 @@ function Header() {
           <form className="header__search-form">
             <input 
               className="header__search-input"
-              type='search'
-              placeholder='search'
-              aria-label='search videos'
+              type="search"
+              placeholder="Search"
+              aria-label="Search videos"
+              value={searchQuery}
+              onChange={(event) => setSearchQuery(event.target.value)}
             />
-            <button className="header__search-button" aria-label='search'>
+
+            <button
+              type="submit"
+              className="header__search-button"
+              aria-label="search"
+            >
               <i className="material-icons">search</i>
             </button>
           </form>
